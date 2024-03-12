@@ -31,7 +31,7 @@ function ShareModal({ show, setShow, data }) {
                 </span>
                 <div className="sharemodalitems">
 
-                    <FaRegCopy onClick={handleCopy} />
+                    <FaRegCopy className='shareicon0'  onClick={handleCopy} />
 
                     <WhatsappShareButton url={url} title={data} ><FaWhatsappSquare className='shareicon0' />
                     </WhatsappShareButton>
