@@ -1,16 +1,12 @@
 import React from 'react'
 import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TelegramShareButton, TwitterShareButton, WhatsappShareButton, } from "react-share";
 
-
 import { MdEmail } from "react-icons/md";
 import { FaWhatsappSquare, FaTwitterSquare, FaTelegram, FaRegCopy } from "react-icons/fa";
 import { FaSquareFacebook, FaLinkedin } from "react-icons/fa6";
-
+import { toast } from 'react-toastify';
 
 import "./style.scss";
-
-
-
 
 function ShareModal({ show, setShow, data }) {
     const hidePopup = () => {
@@ -21,6 +17,7 @@ function ShareModal({ show, setShow, data }) {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(url);
+        toast.success("Text copied to clipboard successfully.");
     };
     return (
         <div className={`videoPopupshare ${show ? "visible" : ""}`}>
