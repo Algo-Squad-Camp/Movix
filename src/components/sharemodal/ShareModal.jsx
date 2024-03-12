@@ -1,17 +1,13 @@
 import React from 'react'
 import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TelegramShareButton, TwitterShareButton, WhatsappShareButton, } from "react-share";
 
-
 import { MdEmail } from "react-icons/md";
 import { FaWhatsappSquare, FaTwitterSquare, FaTelegram, FaRegCopy } from "react-icons/fa";
 import { FaSquareFacebook, FaLinkedin } from "react-icons/fa6";
-
+import { toast } from 'react-toastify';
 
 import "./style.scss";
 import { toast } from 'react-toastify';
-
-
-
 
 function ShareModal({ show, setShow, data }) {
     const hidePopup = () => {
@@ -22,7 +18,11 @@ function ShareModal({ show, setShow, data }) {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(url);
+<<<<<<< HEAD
         toast.success("Text copied to clipboard successfully.")
+=======
+        toast.success("Text copied to clipboard successfully.");
+>>>>>>> 1c8970a29c162af82cef1db06573a2ec4fec879e
     };
     return (
         <div className={`videoPopupshare ${show ? "visible" : ""}`}>
@@ -33,7 +33,11 @@ function ShareModal({ show, setShow, data }) {
                 </span>
                 <div className="sharemodalitems">
 
+<<<<<<< HEAD
                     <FaRegCopy className='shareicon0' onClick={handleCopy} />
+=======
+                    <FaRegCopy className='shareicon0'  onClick={handleCopy} />
+>>>>>>> 1c8970a29c162af82cef1db06573a2ec4fec879e
 
                     <WhatsappShareButton url={url} title={data} ><FaWhatsappSquare className='shareicon0' />
                     </WhatsappShareButton>
