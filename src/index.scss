@@ -18,6 +18,9 @@
   --opacity-layer: linear-gradient(180deg,
       rgba(210, 214, 219, 0) 0%,
       #ffffff 79.17%);
+  --opacity-layer-b: linear-gradient(180deg,
+      rgba(4, 21, 45, 0) 0%,
+      #04152d 79.17%);
 }
 
 /* Dark mode styles */
@@ -42,6 +45,9 @@
   --opacity-layer: linear-gradient(180deg,
       rgba(4, 21, 45, 0) 0%,
       #04152d 79.17%);
+  --opacity-layer-b: linear-gradient(180deg,
+      rgba(210, 214, 219, 0) 0%,
+      #ffffff 79.17%);
 }
 
 :root {

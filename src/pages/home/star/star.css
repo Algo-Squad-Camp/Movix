@@ -49,14 +49,20 @@
     position: absolute;
     top: 14%;
     width: 1140px;
-    max-width: 80%;
-    left: 45%;
+    max-width: 70%;
+    padding: 15px;
+    left: 38%;
     transform: translateX(-50%);
     padding-right: 30%;
+    /* backdrop-filter: blur(2px); */
+    /* background: rgba(21, 21, 21, 0.404); */
     box-sizing: border-box;
     color: white;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
     text-shadow: 0 5px 10px #0004;
 }
+
 
 .container-home-banner .list .item .author {
     font-weight: bold;
@@ -99,25 +105,61 @@
 }
 
 .container-home-banner .list .item .buttons button {
-    border: none;
+    /* border: none;
     background-color: var(--item-bg);
     letter-spacing: 3px;
     font-family: Poppins;
     color: black;
-    font-weight: 500;
+    font-weight: 500; */
+
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+
+
 }
 
 .container-home-banner .list .item .buttons button:hover {
-    background-color: #f1683a;
+    /* background-color: #f1683a;
     border-radius: 10px;
     color: var(--text-color);
     font-weight: 800;
-    transition: 0.2s;
+    transition: 0.2s; */
+
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
 }
 
 .container-home-banner .list .item .buttons button:nth-child(2) {
     background-color: transparent;
-    border: 1px solid var(--text-color);
+    /* border: 1px solid var(--text-color); */
+    /* color: white; */
+    padding: 0;
+    backdrop-filter: blur(30px);
+}
+
+.container-home-banner .list .item .buttons button:nth-child(2):hover {
+    background: #f1683a;
     color: white;
 }
 

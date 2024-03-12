@@ -8,6 +8,7 @@ import { FaSquareFacebook, FaLinkedin } from "react-icons/fa6";
 
 
 import "./style.scss";
+import { toast } from 'react-toastify';
 
 
 
@@ -21,6 +22,7 @@ function ShareModal({ show, setShow, data }) {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(url);
+        toast.success("Text copied to clipboard successfully.")
     };
     return (
         <div className={`videoPopupshare ${show ? "visible" : ""}`}>
@@ -31,7 +33,7 @@ function ShareModal({ show, setShow, data }) {
                 </span>
                 <div className="sharemodalitems">
 
-                    <FaRegCopy onClick={handleCopy} />
+                    <FaRegCopy className='shareicon0' onClick={handleCopy} />
 
                     <WhatsappShareButton url={url} title={data} ><FaWhatsappSquare className='shareicon0' />
                     </WhatsappShareButton>
