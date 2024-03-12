@@ -13,7 +13,7 @@ import mbg from "../../../../public/videos/hpbg.mp4";
 import dbg from "../../../../public/videos/mibg.mp4";
 import at from "../../../../public/images/avatart.png";
 import abg from "../../../../public/videos/abg.mp4";
-import collt from "../../../../public/images/Collectionst.png";
+import collt from "../../../../public/images/collectionst.png";
 
 import './style.css';
 

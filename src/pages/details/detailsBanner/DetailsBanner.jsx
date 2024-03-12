@@ -405,7 +405,7 @@ const DetailsBanner = ({ video, crew }) => {
                                     <ShareModal
                                         show={showModal}
                                         setShow={setShowModal}
-                                        data={shareData}
+                                        data={data}
                                     />
                                 </ContentWrapper>
                             </React.Fragment>

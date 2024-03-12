@@ -3,8 +3,9 @@ import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TelegramSha
 
 
 import { MdEmail } from "react-icons/md";
-import { FaWhatsappSquare, FaTwitterSquare, FaTelegram } from "react-icons/fa";
+import { FaWhatsappSquare, FaTwitterSquare, FaTelegram, FaRegCopy } from "react-icons/fa";
 import { FaSquareFacebook, FaLinkedin } from "react-icons/fa6";
+
 
 import "./style.scss";
 
@@ -16,7 +17,11 @@ function ShareModal({ show, setShow, data }) {
         setShow(false);
     };
 
-    const url = "www.themoviedb.org";
+    const url = `https://movieverse-app.vercel.app/${data?.mediatype}/${data?.id}`;
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(url);
+    };
     return (
         <div className={`videoPopupshare ${show ? "visible" : ""}`}>
             <div className="opacityLayershare" onClick={hidePopup}></div>
@@ -25,6 +30,8 @@ function ShareModal({ show, setShow, data }) {
                     Close
                 </span>
                 <div className="sharemodalitems">
+
+                    <FaRegCopy onClick={handleCopy} />
 
                     <WhatsappShareButton url={url} title={data} ><FaWhatsappSquare className='shareicon0' />
                     </WhatsappShareButton>
