@@ -55,7 +55,7 @@
             flex-direction: row;
         }
 
-        .auth-icons {
+        .auth-icons-details {
             position: absolute;
             right: 1px;
             top: 1px;
@@ -86,9 +86,14 @@
                 }
             }
 
+            @media only screen and (max-width: 440px) {
+                top: -24px;
+                right: 297px;
+            }
+
         }
 
-        .shareicon989 {
+        .shareicon989-details {
             position: absolute;
             right: 1px;
             top: 158px;
@@ -102,6 +107,11 @@
                     color: var(--pink);
                     font-size: 28px;
                 }
+            }
+
+            @media only screen and (max-width: 440px) {
+                right: 15px;
+                top: -21px;
             }
         }
 

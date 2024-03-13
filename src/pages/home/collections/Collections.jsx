@@ -26,7 +26,7 @@ const Collections = () => {
 
     return (
         <div className="contain">
-            <div className="headingt">
+            <div className="headingt-coll">
                 <center>   <img src={collt} alt="" />
                 </center>
             </div>

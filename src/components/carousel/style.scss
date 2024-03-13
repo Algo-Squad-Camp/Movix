@@ -262,7 +262,7 @@
                     color: var(--heading-color);
                 }
 
-                .liked {
+                .liked-maincar {
                     display: inline;
 
                     .addicon {
@@ -276,6 +276,10 @@
                             color: red;
                             fill: red;
                         }
+                    }
+
+                    @media only screen and (max-width: 540px) {
+                        display: none;
                     }
                 }
             }

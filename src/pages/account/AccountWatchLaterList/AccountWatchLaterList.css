@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.AccountLikedList .AccountLikedList-list {
+.AccountLikedList .AccountLikedList-list-wish {
     display: grid;
     gap: 47px;
     margin-top: 30px;
@@ -15,6 +15,16 @@
     margin-left: 20px;
     padding: 0 20px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 440px) {
+    .AccountLikedList .AccountLikedList-list-wish {
+        grid-template-columns: 195px 195px;
+        gap: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0;
+    }
 }
 
 .AccountLikedList .AccountLikedList-item {

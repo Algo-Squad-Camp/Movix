@@ -10,6 +10,7 @@ import { db } from "../../../firebase.js";
 import './star.css';
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader.js"
+import ContentWrapper from "../../../components/contentWrapper/ContentWrapper.jsx";
 
 
 

@@ -142,7 +142,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                                     "MMM D, YYYY"
                                                 )}
                                             </span>
-                                            <span className="liked" onClick={() => {
+                                            <span className="liked-maincar" onClick={() => {
                                                 saveLiked(item);
                                             }}>
                                                 <FaRegHeart className="addicon" />

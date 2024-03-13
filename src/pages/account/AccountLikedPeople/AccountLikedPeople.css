@@ -17,6 +17,16 @@
     margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 440px) {
+    .AccountLikedList .AccountLikedList-list {
+        grid-template-columns: 195px 195px;
+        gap: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0;
+    }
+}
+
 .AccountLikedList .AccountLikedList-item {
     width: 195px;
     cursor: pointer;

@@ -6,7 +6,7 @@ import Navbar from '../navbar/Navbar';
 function ShowNavbar() {
 
     const location = useLocation();
-    const { query } = useParams();
+    const { query, id } = useParams();
     const [showNavbar, setShowNavbar] = useState(true);
 
     useEffect(() => {
@@ -16,7 +16,11 @@ function ShowNavbar() {
             setShowNavbar(false);
         } else if (location.pathname === "*") {
             setShowNavbar(false);
-        } else if (location.pathname === `/search/.....`) {
+        } else if (location.pathname === `/search/:query`) {
+            setShowNavbar(false);
+        } else if (location.pathname === `/person/:id`) {
+            setShowNavbar(false);
+        } else if (location.pathname === "/forgot-password") {
             setShowNavbar(false);
         } else {
             setShowNavbar(true);

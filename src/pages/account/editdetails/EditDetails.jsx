@@ -97,7 +97,7 @@ function EditDetails() {
                             </div>
                         </div>
                         <div class="flex-btn">
-                            <input className='subtxt' type="submit" value="Update Profile" name="update" class="btn" />
+                            <input className='subtxt' type="submit" placeholder='Update Profile' name="update" class="btn" />
                             {registered && <h1 className='recordr'>Record Registered Successfully...</h1>}
                         </div>
                     </form>

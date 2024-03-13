@@ -19,7 +19,7 @@ function AccountPage() {
     const [likedPeople, setLikedPeople] = useState(false);
     const [watchList, setWatchList] = useState(false);
     const [AccountDetailsChange, setAccountDetailsChange] = useState(false);
-    const [activeList, setActiveList] = useState(`Liked Lists Of ${user?.email}`);
+    const [activeList, setActiveList] = useState(`Liked Lists`);
     const [activeLikedList, setActiveLikedList] = useState(`Liked Movies and TV Shows of ${user?.email}`);
 
     const onTabChange = (tab) => {
@@ -27,17 +27,17 @@ function AccountPage() {
             setLikedList(true);
             setWatchList(false);
             setAccountDetailsChange(false);
-            setActiveList(`Liked Lists Of ${user?.email}`);
+            setActiveList(`Liked Lists`);
         } else if (tab === "Watch Later") {
             setWatchList(true);
             setLikedList(false);
             setAccountDetailsChange(false);
-            setActiveList(`Watch Later List Of ${user?.email}`);
+            setActiveList(`Watch Later List`);
         } else if (tab === "Account") {
             setAccountDetailsChange(true);
             setWatchList(false);
             setLikedList(false);
-            setActiveList(`Set and update profile Of ${user?.email}`);
+            setActiveList(`Set and update profile`);
         }
     };
     const onTabChangeLiked = (tab) => {

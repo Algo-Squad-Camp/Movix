@@ -29,10 +29,16 @@
             .review-Area {
                 display: flex;
                 padding-right: 10px;
+                height: 170px;
+                overflow-y: scroll;
                 margin-top: 20px;
                 margin-bottom: 30px;
                 // align-items: center;
                 border-radius: 15px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
                 box-shadow: -48px 55px 220px hsl(0deg 0% 0% / 0.31);
 
                 .reviewtArea-avatar {

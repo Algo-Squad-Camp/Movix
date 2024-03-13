@@ -22,6 +22,13 @@
             display: inline;
             color: var(--text-color);
             font-weight: var(--weight);
+
+            @media only screen and (max-width: 440px) {
+                font-size: 16px;
+                width: 130px;
+                margin-right: 5px;
+
+            }
         }
 
     }

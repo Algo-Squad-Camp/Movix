@@ -130,7 +130,7 @@ const DetailsBanner = ({ video, crew }) => {
                                 <ContentWrapper>
                                     <div className="content">
                                         <span className="canhide"></span>
-                                        <div className="auth-icons">
+                                        <div className="auth-icons-details">
                                             <span onClick={() => {
                                                 saveLiked(data);
                                             }}>
@@ -140,7 +140,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             }}>
                                                 <MdOutlineBookmarkAdd className="watch-icon" /></span>
                                         </div>
-                                        <div className="shareicon989">
+                                        <div className="shareicon989-details">
                                             <span onClick={() => {
                                                 setShowModal(true);
                                                 console.log("Modal clicked");
@@ -183,7 +183,7 @@ const DetailsBanner = ({ video, crew }) => {
 
                                             <div className="row">
                                                 <CircleRating
-                                                    rating={data.vote_average.toFixed(
+                                                    rating={data?.vote_average.toFixed(
                                                         1
                                                     )}
                                                 />

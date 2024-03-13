@@ -32,6 +32,7 @@ const Header = () => {
 
     const handleLogout = async () => {
         setShowProfile(false);
+        setMobileMenu(false);
         try {
             await logout();
             navigate('/login');
@@ -105,12 +106,18 @@ const Header = () => {
                     <Toggle />
                 </div>
                 <ul className="menuItems">
-                    <li className="menuItem" onClick={() => navigationHandler("home")}>
+                    <li className="menuItem" onClick={() => {
+                        navigationHandler("home");
+                        setMobileMenu(false);
+                    }}>
                         Home
                     </li>
                     <li
                         className="menuItem"
-                        onClick={() => navigationHandler("explore")}
+                        onClick={() => {
+                            navigationHandler("explore");
+                            setMobileMenu(false);
+                        }}
                     >
                         Explore
                     </li>
@@ -123,23 +130,17 @@ const Header = () => {
                     {!user?.email ? <li className="menuItem">
                         <button className="loginbutton" onClick={() => {
                             navigate(`/login`);
+                            setMobileMenu(false);
                         }}>
                             Login
                         </button>
                     </li> : <li className="menuItem" id="person" >
-                        <BsPersonCircle onClick={() =>
-                            // setShowProfile(true)
-                            navigate('./account')
+                        <BsPersonCircle onClick={() => {
+                            navigate('./account');
+                            setMobileMenu(false);
+                        }
                         } />
                     </li>}
-                    {/* <div className={`profileuser ${showProfile ? "active" : ""} `}>
-                        <ul>
-                            <li id="useremail">User Email : {user?.email}</li>
-                            <button id="userprofile" onClick={() => navigate('/account')}>Profile</button>
-                            <button id="userlogout" onClick={handleLogout}>Logout</button>
-                            <RxCross2 id="crossuser" onClick={() => setShowProfile(false)} />
-                        </ul>
-                    </div> */}
                     <li className="menuItem">
                         <HiOutlineSearch onClick={openSearch} />
                     </li>

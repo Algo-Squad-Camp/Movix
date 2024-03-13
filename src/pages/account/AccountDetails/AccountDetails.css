@@ -56,9 +56,17 @@
     padding-top: 10px;
     /* grid-template-rows: 50px 50px 50px; */
     row-gap: 15px;
+    margin-left: 5px;
     column-gap: 5px;
     grid-template-columns: 400px 400px 400px;
 
+}
+
+@media only screen and (max-width: 440px) {
+    .AccountArea .AccountArea-body {
+        margin-top: 8px;
+        grid-template-columns: 400px;
+    }
 }
 
 .AccountArea .AccountArea-avatar .AccountArea-avatar-wrapper {

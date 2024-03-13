@@ -71,15 +71,9 @@
                 }
             }
 
-            .watch-icon {
-                font-size: 35px;
-                color: var(--text-color);
-
-                &:hover {
-                    color: var(--pink);
-                    font-size: 33px;
-
-                }
+            @media only screen and (max-width: 440px) {
+                right: 3px;
+                top: -40px;
             }
         }
 

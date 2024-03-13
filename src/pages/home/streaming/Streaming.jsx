@@ -37,7 +37,7 @@ const Netflix = () => {
             <div className="headingt">
                 <center><h1><b>Streaming</b> Platforms</h1></center>
             </div>
-            <div className="logos">
+            <div className="logos-streaming">
                 <div className="logo-item" onClick={() => {
                     setEndpoint("with_networks");
                     setNumber(213);

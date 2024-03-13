@@ -13,5 +13,11 @@
         font-size: 24px;
         color: var(--text-color);
         font-weight: var(--weight);
+
+        @media only screen and (max-width: 440px) {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
     }
 }

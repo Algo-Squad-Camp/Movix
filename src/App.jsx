@@ -52,7 +52,9 @@ function App() {
 
     const themelist = ["dark",
         "light",
-        "colored",]
+        "colored", "dark",
+        "light", "dark",
+        "light",]
 
     const genresCall = async () => {
         let promises = [];
