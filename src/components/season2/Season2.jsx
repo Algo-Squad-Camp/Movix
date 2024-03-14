@@ -15,9 +15,11 @@ import useFetch from "../../hooks/useFetch";
 
 
 import "./style.scss";
+import { useNavigate } from 'react-router-dom';
 
 const Season2 = ({ id, heading }) => {
     const carouselContainer = useRef();
+    const navigate = useNavigate();
     const { url } = useSelector((state) => state.home);
 
     const navigation = (dir) => {
@@ -72,6 +74,12 @@ const Season2 = ({ id, heading }) => {
                                     <div
                                         key={item.id}
                                         className="carouselItem"
+                                        onClick={() =>
+                                            navigate(
+                                                `/${item.media_type || endpoint}/${item.id
+                                                }`
+                                            )
+                                        }
                                     >
                                         <div className="posterBlock" >
                                             <Img src={posterUrl} />

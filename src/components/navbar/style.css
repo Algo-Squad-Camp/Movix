@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    width: 450px;
+    width: 400px;
     height: 68px;
     background: var(--item-bg);
     border-radius: 10px;
@@ -13,12 +13,12 @@
 }
 
 
-@media only screen and (max-width: 410px) {
+/* @media only screen and (max-width: 410px) {
     .navbar {
         width: 430px;
         opacity: 0.8;
     }
-}
+} */
 
 .navbar:hover {
     opacity: 1;
@@ -27,7 +27,7 @@
 
 .navbar ul {
     display: flex;
-    width: 420px;
+    width: 350px;
 }
 
 /* @media only screen and (max-width: 440px) {
@@ -172,6 +172,11 @@
     border-radius: 50%;
     border: 6px solid var(--black);
     transition: 0.5s;
+    opacity: 0;
+}
+
+.navbar ul .list.active~.indicator {
+    opacity: 1;
 }
 
 /* @media only screen and (max-width: 440px) {
@@ -224,9 +229,9 @@
     transform: translateX(calc(70px * 4));
 }
 
-.navbar ul .list:nth-child(6).active~.indicator {
+/* .navbar ul .list:nth-child(6).active~.indicator {
     transform: translateX(calc(70px * 5));
-}
+} */
 
 /* .navbar ul .list:nth-child(7).active~.indicator {
     transform: translateX(calc(70px * 6));

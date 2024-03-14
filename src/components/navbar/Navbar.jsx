@@ -37,12 +37,6 @@ const Navbar = () => {
                                 <span className="text" id="zero">Home</span>
                             </a>
                         </NavLink>
-                        <NavLink className="list" to='/search' style={{ opacity: 0.3 }}>
-                            <a href="">
-                                <span className="icon"><MdOutlineManageSearch /></span>
-                                <span className="text" id="five">Search</span>
-                            </a>
-                        </NavLink>
                         <NavLink className="list" to='/explore/movie'>
                             <a href="">
                                 <span className="icon"><MdOutlineExplore /></span>

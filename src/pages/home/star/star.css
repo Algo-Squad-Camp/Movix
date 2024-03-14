@@ -77,6 +77,8 @@
     color: aqua;
     letter-spacing: 5px;
     font-size: 2em;
+    margin-bottom: 4px;
+    margin-top: 2px;
 }
 
 .container-home-banner .list .item .nameuserstar2345 {
@@ -294,5 +296,12 @@
     .container-home-banner .list .item .title {
         font-size: 10vw;
         width: 400px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container-home-banner .list .item .nameuserstar23 {
+        font-size: 8vw;
+        width: 350px;
     }
 }

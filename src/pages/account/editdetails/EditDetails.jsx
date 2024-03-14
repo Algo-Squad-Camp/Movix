@@ -6,6 +6,7 @@ import "./style.css";
 function EditDetails() {
 
     const [username, setUsername] = useState('');
+    const [came, setCame] = useState("Update Profile");
     const [fullname, setFullname] = useState('');
     const [profile, setProfile] = useState();
     const [date, setDate] = useState('');
@@ -42,6 +43,7 @@ function EditDetails() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setCame("Updating On Progress...");
         Axios.post(`https://movix-api.vercel.app/api/user/addUserDetails`, {
             email,
             username,
@@ -56,6 +58,7 @@ function EditDetails() {
             console.log(response);
             if (response.data.msg === "Record Registered....") {
                 setRegistered(true);
+                setCame("Update Profile");
             }
         }).catch(err => {
             console.log(err);
@@ -97,7 +100,7 @@ function EditDetails() {
                             </div>
                         </div>
                         <div class="flex-btn">
-                            <input className='subtxt' type="submit" placeholder='Update Profile' name="update" class="btn" />
+                            <input className='subtxt' type="submit" placeholder={came} name="update" class="btn" />
                             {registered && <h1 className='recordr'>Record Registered Successfully...</h1>}
                         </div>
                     </form>
