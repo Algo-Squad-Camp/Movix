@@ -70,6 +70,10 @@ function Star() {
         setBackground(bg);
     }, [data]);
 
+    useEffect(() => {
+        toast.info("Data not coming ? Try VPN, Enjoy!")
+    }, [])
+
     return (
         <>
             {!loading ? (
@@ -82,7 +86,7 @@ function Star() {
                             <div class="content">
                                 <div className="nameuserstar2345">Hi, </div>
                                 <div className="nameuserstar23">{details?.name || "Guest"}</div>
-                                <div class="author">{movie?.media_type.toUpperCase()}</div>
+                                <div class="author">{movie?.media_type?.toUpperCase()}</div>
                                 <div class="title">{movie?.title || movie?.name}</div>
                                 <div class="topic">{movie?.release_date}</div>
                                 <div class="des">{movie?.overview}
@@ -97,7 +101,7 @@ function Star() {
                         </div>
                     </div>
                     <div class="thumbnail">
-                        {data?.results.map((item) => {
+                        {data?.results?.map((item) => {
                             const posterUrl = item.poster_path
                                 ? url.poster + item.poster_path
                                 : PosterFallback;

@@ -48,15 +48,13 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                     media_type: item.media_type || endpoint,
                 })
             })
-            const title = data?.title || data?.name;
-            const msgggg = title + " " + "added to liked list";
-            // alert(title + " " + "added to liked list");
+            const title64645 = data.name || data.title;
+            const msgggg = title64645 + " " + "added to liked list";
             toast.success(msgggg);
         } else {
-            const titlee = data?.title || data?.name;
+            const titlee424 = data.name || data.title;
             const end = item.media_type || endpoint;
-            const msgg = "Please Login to like a " + end + titlee;
-            // alert("Please Login to like a " + end);
+            const msgg = "Please Login to like a " + end + titlee424;
             toast.warn(msgg);
         }
     }
