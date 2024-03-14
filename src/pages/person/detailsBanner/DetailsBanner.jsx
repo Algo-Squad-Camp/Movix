@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
+import { FaShareSquare } from "react-icons/fa";
 
 import dayjs from "dayjs";
 import backdrop from "../../../../public/logbg.jpg";
@@ -19,9 +20,11 @@ import { UserAuth } from "../../../context/AuthContext.jsx";
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import { db } from "../../../firebase.js";
 import { toast } from "react-toastify";
+import ShareModal from "../../../components/sharemodal/ShareModal.jsx";
 
 const DetailsBanner = () => {
     const [oneLiked, setOneLiked] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const { url } = useSelector((state) => state.home);
 
 
@@ -71,6 +74,12 @@ const DetailsBanner = () => {
                                                 saveLiked(data);
                                             }}>
                                                 <FaRegHeart className="liked-icon" /></span>
+                                        </div>
+                                        <div className="shareicon989-person">
+                                            <span onClick={() => {
+                                                setShowModal(true);
+
+                                            }}><FaShareSquare className="shareicon98icon" /></span>
                                         </div>
                                         <div className="left">
                                             {data?.profile_path ? (
@@ -169,6 +178,12 @@ const DetailsBanner = () => {
                                             )}
                                         </div>
                                     </div>
+                                    <ShareModal
+                                        show={showModal}
+                                        setShow={setShowModal}
+                                        data={data}
+                                        media="person"
+                                    />
                                 </ContentWrapper>
                             </React.Fragment>
                         )}

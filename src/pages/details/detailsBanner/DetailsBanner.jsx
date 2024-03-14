@@ -406,6 +406,7 @@ const DetailsBanner = ({ video, crew }) => {
                                         show={showModal}
                                         setShow={setShowModal}
                                         data={data}
+                                        media={mediaType}
                                     />
                                 </ContentWrapper>
                             </React.Fragment>

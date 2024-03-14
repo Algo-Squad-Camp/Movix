@@ -8,12 +8,16 @@ import { toast } from 'react-toastify';
 
 import "./style.scss";
 
-function ShareModal({ show, setShow, data }) {
+function ShareModal({ show, setShow, data, media }) {
     const hidePopup = () => {
         setShow(false);
     };
 
-    const url = `https://movieverse-app.vercel.app/${data?.mediatype}/${data?.id}`;
+    const url = `https://moviesverse.vercel.app/${data?.media_type || media}/${data?.id}`;
+    const title = data?.title || data?.name;
+    const date = data?.release_date;
+    const des = data?.overview;
+    const dataa = title + "\n " + date + "\n " + des;
 
     const handleCopy = () => {
         navigator.clipboard.writeText(url);
@@ -29,10 +33,10 @@ function ShareModal({ show, setShow, data }) {
                 <div className="sharemodalitems">
                     <FaRegCopy className='shareicon0' onClick={handleCopy} />
 
-                    <WhatsappShareButton url={url} title={data} ><FaWhatsappSquare className='shareicon0' />
+                    <WhatsappShareButton url={url} title={dataa} ><FaWhatsappSquare className='shareicon0' />
                     </WhatsappShareButton>
 
-                    <TelegramShareButton url={url} title={data} ><FaTelegram className='shareicon0' />
+                    <TelegramShareButton url={url} title={dataa} ><FaTelegram className='shareicon0' />
                     </TelegramShareButton>
 
                     <FacebookShareButton url={url} quote="Moviesverse" hashtag="#MoviesVerse #Movie"><FaSquareFacebook className='shareicon0' />
@@ -41,7 +45,7 @@ function ShareModal({ show, setShow, data }) {
                     <LinkedinShareButton
                         url={url}
                         title={"Moviesverse"}
-                        summary={data}
+                        summary={dataa}
 
                     ><FaLinkedin className='shareicon0' />
                     </LinkedinShareButton>

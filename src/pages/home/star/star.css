@@ -15,8 +15,8 @@
 }
 
 .container-home-banner .list .item img {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     filter: var(--bg-img);
@@ -278,6 +278,15 @@
         width: 420px;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .container-home-banner .list .item img {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
 
 @media only screen and (max-width: 720px) {
     .container-home-banner .list .item .content {
