@@ -121,12 +121,6 @@ const Header = () => {
                     >
                         Explore
                     </li>
-                    {user?.email && <li
-                        className="menuItem"
-                        onClick={handleLogout}
-                    >
-                        <button className="logbutton">Logout</button>
-                    </li>}
                     {!user?.email ? <li className="menuItem">
                         <button className="loginbutton" onClick={() => {
                             navigate(`/login`);
@@ -140,6 +134,12 @@ const Header = () => {
                             setMobileMenu(false);
                         }
                         } />
+                    </li>}
+                    {user?.email && <li
+                        className="menuItem"
+                        onClick={handleLogout}
+                    >
+                        <button className="logbutton">Logout</button>
                     </li>}
                     <li className="menuItem">
                         <HiOutlineSearch onClick={openSearch} />

@@ -36,7 +36,7 @@
     backdrop-filter: blur(10px);
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd {
         width: 393px;
     }
@@ -52,7 +52,7 @@
     justify-content: center;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .auth-form-box {
         width: 100%;
     }
@@ -98,13 +98,13 @@
     pointer-events: none;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .auth-form-box.register {
         padding: 0 40px 0 40px;
     }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .auth-form-box.login {
         padding: 0 40px 0 40px;
     }
@@ -256,7 +256,7 @@
     justify-content: center;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .auth-info-text {
         display: none;
     }
@@ -337,7 +337,7 @@
     transition-delay: 1.6s;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .bg-animate {
         display: none;
     }
@@ -362,7 +362,7 @@
     transition-delay: .5s;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 680px) {
     #authwrapperbd .bg-animate2 {
         display: none;
     }

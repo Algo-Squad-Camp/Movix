@@ -10,14 +10,30 @@ import { db } from "../../../firebase.js";
 import './star.css';
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader.js"
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper.jsx";
-
+import Axios from "axios";
 
 
 function Star() {
 
     const { user } = UserAuth();
+    const [details, setDetails] = useState({});
+    const [get, setGet] = useState(false);
     const movieID = doc(db, 'users', `${user?.email}`);
+
+    useEffect(() => {
+        const emailuser = user?.email;
+        Axios.post(`https://movix-api.vercel.app/api/user/getDetails`, {
+            email: emailuser,
+        }).then(response => {
+            console.log(response);
+            if (response.data.msg === "success") {
+                setGet(true);
+            }
+            setDetails(response.data);
+        }).catch(err => {
+            console.log(err);
+        })
+    }, []);
 
     const saveWatchList = async (movie) => {
         if (user?.email) {
@@ -93,6 +109,8 @@ function Star() {
                             <div className="opacity-layer"></div>
 
                             <div class="content">
+                                <div className="nameuserstar2345">Hi, </div>
+                                <div className="nameuserstar23">{details?.name || "Guest"}</div>
                                 <div class="author">{movie?.media_type.toUpperCase()}</div>
                                 <div class="title">{movie?.title || movie?.name}</div>
                                 <div class="topic">{movie?.release_date}</div>

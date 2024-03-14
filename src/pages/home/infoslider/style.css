@@ -19,13 +19,13 @@
     color: var(--heading-color);
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 968px) {
     .secinfohead {
         display: block;
     }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 968px) {
     .slider-container-hgytury {
         display: none;
     }

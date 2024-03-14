@@ -42,7 +42,7 @@ function Reviews({ data, loading, title }) {
                                     <div className="reviewArea-body">
                                         <p><b>Name:</b> {item.author}</p>
                                         <p><b>Posted on:</b> {item.created_at}</p>
-                                        <p>
+                                        <p className='pmaincon4565'>
                                             <b>Review body:</b> {item.content}
                                         </p>
                                     </div>

@@ -71,8 +71,8 @@
                 }
             }
 
-            @media only screen and (max-width: 440px) {
-                right: 3px;
+            @media only screen and (max-width: 725px) {
+                left: 3px;
                 top: -40px;
             }
         }
@@ -132,7 +132,7 @@
                     margin-bottom: 10px;
                 }
 
-                .description {
+                .description-person {
                     line-height: 24px;
 
                     @include md {

@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore'
-import EditDetails from './../pages/account/editdetails/EditDetails';
 
 const AuthContext = createContext()
 
@@ -27,11 +26,6 @@ export function AuthContextProvider({ children }) {
         return signOut(auth);
     }
 
-    function editDetails(email) {
-        setDoc(doc(db, 'editUsers', email), {
-            editUsersDetails: []
-        })
-    }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -43,7 +37,7 @@ export function AuthContextProvider({ children }) {
     })
 
     return (
-        <AuthContext.Provider value={{ signUp, logIn, logout, editDetails, user }}>
+        <AuthContext.Provider value={{ signUp, logIn, logout, user }}>
             {children}
         </AuthContext.Provider>
     )

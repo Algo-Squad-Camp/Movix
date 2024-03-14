@@ -26,7 +26,6 @@ import AccountPage from "./pages/account/AccountPage";
 import PersonDetails from "./pages/person/PersonDetails";
 import About from "./pages/about/About";
 import ResestPassword from "./components/resetpassword/ResestPassword";
-// import ProtectedRoute from "./components/protectedroute/ProtectedRoute"
 
 function App() {
     const dispatch = useDispatch();

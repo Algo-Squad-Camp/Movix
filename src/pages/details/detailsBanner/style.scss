@@ -86,9 +86,14 @@
                 }
             }
 
-            @media only screen and (max-width: 440px) {
+            @media only screen and (max-width: 940px) {
+                top: -45px;
+                left: 67px;
+            }
+
+            @media only screen and (max-width: 760px) {
                 top: -24px;
-                right: 297px;
+                left: 15px;
             }
 
         }
@@ -109,7 +114,12 @@
                 }
             }
 
-            @media only screen and (max-width: 440px) {
+            @media only screen and (max-width: 1040px) {
+                top: -45px;
+                right: 15px;
+            }
+
+            @media only screen and (max-width: 760px) {
                 right: 15px;
                 top: -21px;
             }
@@ -185,6 +195,11 @@
 
                 @include md {
                     max-width: 90px;
+                    min-width: 70px;
+                }
+
+                @media only screen and (max-width: 435px) {
+                    min-width: 60px;
                 }
 
                 .CircularProgressbar-text {

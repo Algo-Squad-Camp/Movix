@@ -14,8 +14,24 @@
         display: none;
     }
 
-    @media only screen and (max-width: 440px) {
+    @media only screen and (max-width: 540px) {
         width: 390px;
+    }
+
+    @media only screen and (max-width: 430px) {
+        width: 380px;
+    }
+
+    @media only screen and (max-width: 420px) {
+        width: 370px;
+    }
+
+    @media only screen and (max-width: 410px) {
+        width: 360px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 350px;
     }
 
     .autocomplete-items {
@@ -79,8 +95,24 @@
                     // font-size: 16px;
 
 
-                    @media only screen and (max-width: 440px) {
-                        width: 265px;
+                    @media only screen and (max-width: 540px) {
+                        width: 245px;
+                    }
+
+                    @media only screen and (max-width: 430px) {
+                        width: 255px;
+                    }
+
+                    @media only screen and (max-width: 420px) {
+                        width: 245px;
+                    }
+
+                    @media only screen and (max-width: 410px) {
+                        width: 235px;
+                    }
+
+                    @media only screen and (max-width: 400px) {
+                        width: 225px;
                     }
                 }
 

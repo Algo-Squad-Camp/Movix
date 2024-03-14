@@ -148,6 +148,10 @@
 
         #person {
             font-size: 25px;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 25px;
+            }
         }
     }
 

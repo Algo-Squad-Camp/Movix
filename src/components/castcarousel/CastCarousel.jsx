@@ -9,7 +9,7 @@ import Line from "../line/Line";
 import { useNavigate } from "react-router-dom";
 
 
-const CastCarousel = ({ data, loading, heading }) => {
+const CastCarousel = ({ data, loading }) => {
     const { url } = useSelector((state) => state.home);
     const navigate = useNavigate();
 

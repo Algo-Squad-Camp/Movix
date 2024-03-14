@@ -99,11 +99,12 @@ const DetailsBanner = () => {
 
                                             <div className="overview">
                                                 <div className="heading">
-                                                    Overview
+                                                    Biography
                                                 </div>
-                                                <div className="description">
+                                                <div className="description-person">
                                                     {data?.biography}
                                                 </div>
+
                                             </div>
 
                                             <div className="info">

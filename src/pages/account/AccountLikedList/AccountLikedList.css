@@ -17,7 +17,7 @@
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 540px) {
     .AccountLikedList .AccountLikedList-list-main {
         grid-template-columns: 195px 195px;
         gap: 10px;
