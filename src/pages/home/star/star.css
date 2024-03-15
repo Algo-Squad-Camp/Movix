@@ -312,8 +312,8 @@
 
 @media only screen and (max-width: 720px) {
     .container-home-banner .list .item .title {
-        font-size: 10vw;
-        width: 400px;
+        font-size: 9vw;
+        width: 500px;
     }
 }
 

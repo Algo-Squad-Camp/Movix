@@ -17,10 +17,30 @@
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 540px) {
-    .AccountLikedList .AccountLikedList-list-wish {
+@media only screen and (max-width: 500px) {
+    .AccountLikedList .AccountLikedList-list-main {
         grid-template-columns: 195px 195px;
-        gap: 10px;
+        gap: 0px;
+        margin-left: 3px;
+        margin-right: 3px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 585px) {
+    .AccountLikedList .AccountLikedList-list-main {
+        grid-template-columns: 195px 195px 195px;
+        gap: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 790px) {
+    .AccountLikedList .AccountLikedList-list-main {
+        grid-template-columns: 195px 195px 195px 195px;
+        gap: 5px;
         margin-left: 5px;
         margin-right: 5px;
         padding: 0;

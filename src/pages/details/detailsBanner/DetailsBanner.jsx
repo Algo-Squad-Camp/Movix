@@ -202,8 +202,8 @@ const DetailsBanner = ({ video, crew }) => {
                                                 <div
                                                     className="playbtn"
                                                     onClick={() => {
-                                                        setStream(!stream)
-
+                                                        setStream(!stream);
+                                                        toast.info("Scroll down to watch online!");
 
                                                     }}
                                                 >

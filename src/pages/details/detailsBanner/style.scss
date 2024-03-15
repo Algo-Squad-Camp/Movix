@@ -213,6 +213,10 @@
                 gap: 20px;
                 cursor: pointer;
 
+                @media only screen and (max-width: 535px) {
+                    gap: 10px;
+                }
+
                 svg {
                     width: 60px;
 
@@ -265,6 +269,10 @@
                 align-items: center;
                 gap: 25px;
                 margin-bottom: 25px;
+
+                @media only screen and (max-width: 535px) {
+                    gap: 17px;
+                }
             }
 
             .info {
