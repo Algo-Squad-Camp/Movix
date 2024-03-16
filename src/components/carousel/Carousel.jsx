@@ -117,10 +117,6 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                             )
                                         }>
                                             <Img src={posterUrl} />
-                                            {/* {!clicked ? <MdOutlineAddToPhotos className="addicon" onClick={() => {
-                                                setClicked(true);
-                                                console.log(item.id);
-                                            }} /> : <FaHeart className="clickedicon" />} */}
                                             <CircleRating
                                                 rating={item.vote_average.toFixed(
                                                     1

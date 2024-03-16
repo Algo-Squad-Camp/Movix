@@ -31,7 +31,7 @@
             .review-Area {
                 display: flex;
                 padding-right: 10px;
-                height: 170px;
+                // height: 170px;
                 margin-top: 20px;
                 margin-bottom: 30px;
                 // align-items: center;
@@ -41,10 +41,6 @@
                 padding-left: 5px;
                 padding-right: 5px;
                 box-shadow: -48px 55px 220px hsl(0deg 0% 0% / 0.31);
-
-                @media only screen and (max-width: 435px) {
-                    height: 200px;
-                }
 
                 .reviewtArea-avatar {
                     width: 125px;
@@ -58,11 +54,20 @@
                         margin-left: 10px;
                         border-radius: 100%;
                         border: solid 4px #070707;
+
+                        @media only screen and (max-width: 435px) {
+                            width: 80px;
+                            height: 80px;
+                        }
                     }
 
                     svg {
                         font-size: 141px;
                         color: var(--text-color);
+
+                        @media only screen and (max-width: 435px) {
+                            font-size: 85px;
+                        }
                     }
 
                     .reviewArea-avatar-wrapper {
@@ -78,21 +83,24 @@
                     margin-top: 34px;
                     margin-left: 10px;
 
+                    @media only screen and (max-width: 435px) {
+                        margin-top: 15px;
+                        margin-left: 0px;
+                    }
+
                     p {
                         color: var(--text-color);
                         margin: 0;
                         line-height: 1.1;
                         margin-bottom: 10px;
+
+                        .parabold34576 {
+                            color: var(--heading-color);
+                        }
                     }
 
                     .pmaincon4565 {
-                        max-height: 80px;
-                        overflow-y: scroll;
-
-                        @media only screen and (max-width: 435px) {
-                            max-height: 40px;
-                            max-width: 160px;
-                        }
+                        line-height: 1.1;
                     }
                 }
             }

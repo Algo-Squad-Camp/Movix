@@ -21,6 +21,7 @@ import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import { db } from "../../../firebase.js";
 import { toast } from "react-toastify";
 import ShareModal from "../../../components/sharemodal/ShareModal.jsx";
+import Overview from "../../../components/overview/Overview.jsx";
 
 const DetailsBanner = () => {
     const [oneLiked, setOneLiked] = useState(false);
@@ -84,7 +85,7 @@ const DetailsBanner = () => {
                                         <div className="left">
                                             {data?.profile_path ? (
                                                 <Img
-                                                    className="posterImg"
+                                                    className="posterImg real4535"
                                                     src={
                                                         url.profile +
                                                         data?.profile_path
@@ -108,10 +109,10 @@ const DetailsBanner = () => {
 
                                             <div className="overview">
                                                 <div className="heading">
-                                                    Biography
+                                                    Biography :
                                                 </div>
                                                 <div className="description-person">
-                                                    {data?.biography}
+                                                    <Overview overview={data?.biography} />
                                                 </div>
 
                                             </div>

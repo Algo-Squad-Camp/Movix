@@ -207,7 +207,7 @@
                 }
             }
 
-            .playbtn {
+            .playbtn-real {
                 display: flex;
                 align-items: center;
                 gap: 20px;
@@ -264,14 +264,14 @@
                 }
             }
 
-            .row {
+            .row-real {
                 display: flex;
                 align-items: center;
                 gap: 25px;
                 margin-bottom: 25px;
 
                 @media only screen and (max-width: 535px) {
-                    gap: 17px;
+                    gap: 13px;
                 }
             }
 

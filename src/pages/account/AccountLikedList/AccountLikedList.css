@@ -7,57 +7,43 @@
 }
 
 .AccountLikedList .AccountLikedList-list-main {
-    display: grid;
-    gap: 47px;
-    margin-top: 30px;
-    grid-template-columns: 195px 195px 195px 195px 195px;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 0 20px;
-    margin-bottom: 20px;
-}
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
+    margin-bottom: 50px;
 
-@media only screen and (max-width: 500px) {
-    .AccountLikedList .AccountLikedList-list-main {
-        grid-template-columns: 195px 195px;
-        gap: 0px;
-        margin-left: 3px;
-        margin-right: 3px;
-        padding: 0;
-    }
-}
-
-@media screen and (min-width: 585px) {
-    .AccountLikedList .AccountLikedList-list-main {
-        grid-template-columns: 195px 195px 195px;
-        gap: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 0;
-    }
-}
-
-@media screen and (min-width: 790px) {
-    .AccountLikedList .AccountLikedList-list-main {
-        grid-template-columns: 195px 195px 195px 195px;
-        gap: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 0;
-    }
 }
 
 .AccountLikedList .AccountLikedList-item {
-    width: 195px;
+    width: calc(50% - 5px);
+    margin-bottom: 15px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
-/* @media only screen and (max-width: 583px) {
+@media only screen and (min-width: 350px) {
     .AccountLikedList .AccountLikedList-item {
-        width: 170px;
+        width: calc(51% - 14px);
     }
-} */
+}
 
+@media only screen and (min-width: 480px) {
+    .AccountLikedList .AccountLikedList-item {
+        width: calc(34% - 14px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .AccountLikedList .AccountLikedList-item {
+        width: calc(25% - 15px);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .AccountLikedList .AccountLikedList-item {
+        width: calc(20% - 16px);
+    }
+}
 
 .AccountLikedList .AccountLikedList-poster {
     position: relative;
@@ -65,16 +51,20 @@
     aspect-ratio: 1 / 1.5;
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
-    border: 1px solid var(--text-color);
-    border-radius: 12px;
     align-items: flex-end;
+    border: 1px solid var(--item-bg);
     justify-content: space-between;
     padding: 10px;
-    overflow: hidden;
-    transition: .5s;
+    transition: all ease 0.5s;
+    border-radius: 12px;
 }
+
+.AccountLikedList .AccountLikedList-poster.people456 {
+    border-radius: 40%;
+}
+
 
 .AccountLikedList .lazy-load-image-background {
     position: absolute;
@@ -97,6 +87,19 @@
     object-position: center;
     filter: var(--bg-img2);
 }
+
+.AccountLikedList .medialikedlist6757 {
+    position: absolute;
+    top: 6px;
+    padding: 3px;
+    font-size: 10px;
+    left: 6px;
+    background-color: var(--media);
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
 
 .AccountLikedList .AccountLikedList-delete {
     position: absolute;

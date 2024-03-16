@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { IoPersonCircleOutline } from "react-icons/io5";
 
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
+import OverviewRev from '../../../components/overviewrev/OverviewRev';
 
 function Reviews({ data, loading, title }) {
     const [user, setUser] = useState(undefined);
@@ -41,9 +42,9 @@ function Reviews({ data, loading, title }) {
                                     </div>
                                     <div className="reviewArea-body">
                                         <p><b>Name:</b> {item.author}</p>
-                                        <p><b>Posted on:</b> {item.created_at}</p>
+                                        <p><b className='parabold34576'>Posted on:</b> {item.created_at}</p>
                                         <p className='pmaincon4565'>
-                                            <b>Review body:</b> {item.content}
+                                            <b className='parabold34576'>Review : </b><OverviewRev overview={item.content} />
                                         </p>
                                     </div>
                                 </div>

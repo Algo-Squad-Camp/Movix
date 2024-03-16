@@ -54,8 +54,9 @@ const AccountLikedPeople = () => {
                             key={item.id}
                             className="AccountLikedList-item"
                         >
-                            <div className="AccountLikedList-poster">
+                            <div className="AccountLikedList-poster people456">
                                 <Img src={url.profile + item.img} />
+                                <div className="medialikedlist6757">{item?.media_type}</div>
                                 <MdDeleteForever onClick={() => deleteLiked(item?.id)} className="AccountLikedList-delete" />
 
                             </div>

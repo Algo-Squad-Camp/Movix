@@ -25,6 +25,7 @@ import Languages from "../../../components/Language/Languages.jsx";
 import Countrys from "../../../components/Country/Countrys.jsx";
 import Stream from "../../../components/stream/Stream.jsx";
 import ShareModal from "../../../components/sharemodal/ShareModal.jsx";
+import Overview from "../../../components/overview/Overview.jsx";
 import { toast } from "react-toastify";
 
 
@@ -181,14 +182,14 @@ const DetailsBanner = ({ video, crew }) => {
 
                                             <Genres data={_genres} />
 
-                                            <div className="row">
+                                            <div className="row-real">
                                                 <CircleRating
-                                                    rating={data?.vote_average.toFixed(
+                                                    rating={data?.vote_average?.toFixed(
                                                         1
                                                     )}
                                                 />
                                                 <div
-                                                    className="playbtn"
+                                                    className="playbtn-real"
                                                     onClick={() => {
                                                         setShow(true);
                                                         setVideoId(video.key);
@@ -200,7 +201,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     </span>
                                                 </div>
                                                 <div
-                                                    className="playbtn"
+                                                    className="playbtn-real"
                                                     onClick={() => {
                                                         setStream(!stream);
                                                         toast.info("Scroll down to watch online!");
@@ -219,7 +220,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     Overview
                                                 </div>
                                                 <div className="description">
-                                                    {data.overview}
+                                                    <Overview overview={data?.overview} />
                                                 </div>
                                             </div>
 
