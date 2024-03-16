@@ -33,6 +33,7 @@ const DetailsBanner = ({ video, crew }) => {
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState(null);
     const [stream, setStream] = useState(false);
+    const [openstream, setOpenstream] = useState(false);
 
     const [oneLiked, setOneLiked] = useState(false);
     const [oneWatch, setOneWatch] = useState(false);
@@ -203,9 +204,13 @@ const DetailsBanner = ({ video, crew }) => {
                                                 <div
                                                     className="playbtn-real"
                                                     onClick={() => {
+                                                        setOpenstream(!openstream);
                                                         setStream(!stream);
-                                                        toast.info("Scroll down to watch online!");
-
+                                                        if (openstream) {
+                                                            toast.info("Video Space closed!")
+                                                        } else {
+                                                            toast.info("Scroll down to watch online!");
+                                                        }
                                                     }}
                                                 >
                                                     <PlayIcon />
@@ -264,7 +269,9 @@ const DetailsBanner = ({ video, crew }) => {
                                                             First Air Date:{" "}
                                                         </span>
                                                         <span className="text">
-                                                            {data.first_air_date}
+                                                            {dayjs(
+                                                                data?.air_date
+                                                            ).format("MMM D, YYYY")}
                                                         </span>
                                                     </div>
                                                 )}

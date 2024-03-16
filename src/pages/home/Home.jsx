@@ -25,6 +25,7 @@ import Axios from 'axios';
 import FavourateGenre from './favourategenre/FavourateGenre';
 import Genres from './../../components/genres/Genres';
 import ScrollButton from '../../components/scrollbutton/ScrollButton';
+import Banner from './mainbanner/Banner';
 
 
 function Home() {
@@ -209,6 +210,7 @@ function Home() {
           <Comedy />
           {watchMovies && <CustomLiked1 data={data03} loading={loading03} endpoint={endpoint03} title={title3} />}
           <VoteCount />
+          <Banner />
         </div>
       </div>
       {show && <ScrollButton />}

@@ -84,6 +84,18 @@ body {
   background-color: var(--black);
 }
 
+.Toastify__toast-container--bottom-right {
+  color: var(--text-color);
+}
+
+@media only screen and (max-width: 540px) {
+  .Toastify__toast-container--bottom-right {
+    bottom: 0;
+    top: 80px;
+    width: 368px;
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
