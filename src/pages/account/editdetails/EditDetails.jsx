@@ -3,6 +3,7 @@ import { UserAuth } from '../../../context/AuthContext';
 import Axios from "axios"
 
 import "./style.css";
+import { toast } from 'react-toastify';
 function EditDetails() {
 
     const [username, setUsername] = useState('');
@@ -43,6 +44,7 @@ function EditDetails() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        toast.loading("Updating on progress...");
         setCame("Updating On Progress...");
         Axios.post(`https://movix-api.vercel.app/api/user/addUserDetails`, {
             email,
@@ -59,9 +61,12 @@ function EditDetails() {
             if (response.data.msg === "Record Registered....") {
                 setRegistered(true);
                 setCame("Update Profile");
+                toast.update("Account Details Updated Successfully!");
+                toast.success("Account Details Updated Successfully!");
             }
         }).catch(err => {
             console.log(err);
+            toast.error("Some Error Occured During Updating!");
         })
 
     };

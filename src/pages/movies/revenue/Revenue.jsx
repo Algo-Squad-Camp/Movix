@@ -8,18 +8,12 @@ import useFetch from "../../../hooks/useFetch";
 
 const Revenue = () => {
 
-    const [endpoint, setEndpoint] = useState("revenue.desc");
-    const { data, loading } = useFetch(`/discover/movie?sort_by=${endpoint}`);
-
-    const onTabChange = (tab) => {
-        setEndpoint(tab === "High" ? "revenue.desc" : "revenue.asc");
-    };
+    const { data, loading } = useFetch(`/discover/movie?sort_by=revenue.desc`);
 
     return (
         <div className="carouselSection">
             <ContentWrapper>
                 <span className="carouselTitle">Overall Revenue</span>
-                <SwitchTabs data={["High", "Low"]} onTabChange={onTabChange} />
             </ContentWrapper>
             <Carousel
                 data={data?.results}

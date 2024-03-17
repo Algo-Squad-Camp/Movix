@@ -20,7 +20,11 @@ function Reviews({ data, loading, title }) {
                 <h1>Reviews Posted for '{title}' </h1>
                 <h4>Total Reviews : {length}</h4>
                 <div className="reviews-container">
+
                     <div className="review-item">
+                        {dataa?.length <= 0 && <div className='noreview8789'>
+                            <span className='fsdasdfah564654'>No Reviews Posted yet to see!</span>
+                        </div>}
                         {dataa?.map((item) => {
                             const details = item?.author_details;
                             const posterurl = url.profile + details.avatar_path;
@@ -42,9 +46,9 @@ function Reviews({ data, loading, title }) {
                                     </div>
                                     <div className="reviewArea-body">
                                         <p><b>Name:</b> {item.author}</p>
-                                        <p><b className='parabold34576'>Posted on:</b> {item.created_at}</p>
+                                        <p className='parabold34576'><b>Posted on:</b> {item.created_at}</p>
                                         <p className='pmaincon4565'>
-                                            <b className='parabold34576'>Review : </b><OverviewRev overview={item.content} />
+                                            <b>Review : </b><OverviewRev className='parabold34576' overview={item.content} />
                                         </p>
                                     </div>
                                 </div>

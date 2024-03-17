@@ -19,14 +19,35 @@
     }
 
     .reviews-container {
-        min-height: 545px;
         min-height: 175px;
+        max-height: 575px;
         padding-left: 15px;
         padding-right: 15px;
         overflow-x: hidden;
         overflow-y: auto;
 
         .review-item {
+
+            .noreview8789 {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+                font-size: 22px;
+                margin-top: 15px;
+                color: var(--text-color);
+                font-weight: 500;
+
+                .fsdasdfah564654 {
+                    background: orange;
+                    border-radius: 12px;
+                    width: 70%;
+                    padding: 10px;
+                }
+            }
 
             .review-Area {
                 display: flex;
@@ -96,6 +117,7 @@
 
                         .parabold34576 {
                             color: var(--heading-color);
+                            font-weight: 300;
                         }
                     }
 
@@ -105,5 +127,6 @@
                 }
             }
         }
+
     }
 }

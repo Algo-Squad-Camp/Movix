@@ -12,6 +12,7 @@ import PosterFallback from "../../../assets/no-poster.png";
 
 
 import "./AccountWatchLaterList.css";
+import { toast } from "react-toastify";
 
 const AccountWatchLaterList = () => {
 
@@ -31,11 +32,13 @@ const AccountWatchLaterList = () => {
     const deleteLiked = async (passedID) => {
         try {
             const result = movies?.filter((item => item.id !== passedID))
+            toast.success("Item Deleted From WatchLater Section");
             await updateDoc(movieRef, {
                 savedWatchLater: result,
             });
         } catch (error) {
             console.log(error)
+            toast.error("Some Error occured, try again");
         }
     }
 
@@ -57,7 +60,7 @@ const AccountWatchLaterList = () => {
                             <div className="AccountLikedList-poster" >
                                 <Img src={posterurl} />
                                 <div className="medialikedlist6757">{item?.media_type}</div>
-                                <MdDeleteForever onClick={() => deleteLiked(item?.id)} className="AccountLikedList-delete" />
+                                <div className="deleteiconlists5435">  <MdDeleteForever onClick={() => deleteLiked(item?.id)} className="AccountLikedList-delete" /></div>
 
                             </div>
                             <div className="AccountLikedList-text" onClick={() =>

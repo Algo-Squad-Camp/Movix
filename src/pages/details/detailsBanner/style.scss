@@ -18,8 +18,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 0.3;
-        backdrop-filter: blur(2px);
+        opacity: 0.2;
+        backdrop-filter: blur(3px);
         overflow: hidden;
 
         .lazy-load-image-background {
@@ -147,6 +147,8 @@
             .title {
                 font-size: 28px;
                 line-height: 40px;
+                color: #f1683a;
+                font-weight: 550;
 
                 @include md {
                     font-size: 34px;
@@ -182,6 +184,7 @@
 
                 .description {
                     line-height: 24px;
+                    color: var(--heading-color);
 
                     @include md {
                         padding-right: 100px;
@@ -279,6 +282,14 @@
                 border-bottom: 1px solid var(--line);
                 padding: 15px 0;
                 display: flex;
+
+                &.writer645 {
+                    border-bottom: 0;
+                }
+
+                &.linecreator654 {
+                    border-bottom: 0;
+                }
 
                 .infoItem {
                     margin-right: 10px;

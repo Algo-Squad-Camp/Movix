@@ -198,7 +198,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                 >
                                                     <PlayIcon />
                                                     <span className="text">
-                                                        Watch Trailer
+                                                        <b> Watch Trailer</b>
                                                     </span>
                                                 </div>
                                                 <div
@@ -215,14 +215,14 @@ const DetailsBanner = ({ video, crew }) => {
                                                 >
                                                     <PlayIcon />
                                                     <span className="text">
-                                                        Stream Online
+                                                        <b> Stream Online</b>
                                                     </span>
                                                 </div>
                                             </div>
 
                                             <div className="overview">
                                                 <div className="heading">
-                                                    Overview
+                                                    <b>  Overview</b>
                                                 </div>
                                                 <div className="description">
                                                     <Overview overview={data?.overview} />
@@ -364,7 +364,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             )}
 
                                             {writer?.length > 0 && (
-                                                <div className="info">
+                                                <div className="info writer645">
                                                     <span className="text bold">
                                                         Writer:{" "}
                                                     </span>
@@ -382,7 +382,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             )}
 
                                             {data?.created_by?.length > 0 && (
-                                                <div className="info">
+                                                <div className="info linecreator654">
                                                     <span className="text bold">
                                                         Creator:{" "}
                                                     </span>
