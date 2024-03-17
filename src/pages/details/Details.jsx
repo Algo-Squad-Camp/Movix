@@ -64,6 +64,10 @@ const Details = () => {
                 <Similar mediaType={mediaType} id={id} titlee={title} />
                 <Recommendation mediaType={mediaType} id={id} titlee={title} />
                 <Reviews data={reviews} loading={reviewloading} title={title} />
+                <div className="alternateswipergfhf6677">
+                    <span className='fhfhfhyf67576'>Use Desktop to experience more features.</span>
+                    <span className='fhfhfhyf67576'>Make an account to like and add to watchlist content and get recommendations accordingly..</span>
+                </div>
             </div>
             {show && <ScrollButton />}
         </>

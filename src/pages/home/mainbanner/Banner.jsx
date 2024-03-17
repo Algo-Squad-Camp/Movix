@@ -23,45 +23,51 @@ function Banner() {
     }, [])
 
     return (
-        <div className="bannerjjsxgty">
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                navigation={true}
-                loop={true}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 35,
-                    stretch: 200,
-                    depth: 250,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
-                autoplay={{
-                    delay: 2000,
-                    disableOnInteraction: true,
-                }}
-                modules={[EffectCoverflow, Navigation, Autoplay]}
-                className="gameSwiper"
-            >
-                {
-                    data?.map((item) => {
-                        const posterUrl = item.poster_path
-                            ? url.poster + item.poster_path
-                            : PosterFallback;
+        <>
+            <div className="bannerjjsxgty">
+                <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    navigation={true}
+                    loop={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 35,
+                        stretch: 200,
+                        depth: 250,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: true,
+                    }}
+                    modules={[EffectCoverflow, Navigation, Autoplay]}
+                    className="gameSwiper"
+                >
+                    {
+                        data?.map((item) => {
+                            const posterUrl = item.poster_path
+                                ? url.poster + item.poster_path
+                                : PosterFallback;
 
-                        return (
-                            <SwiperSlide>
-                                <div className="gameSlider">
-                                    <img src={posterUrl} alt={data.title} />
-                                </div>
-                            </SwiperSlide>
-                        );
-                    })
-                }
-            </Swiper>
-        </div>
+                            return (
+                                <SwiperSlide>
+                                    <div className="gameSlider">
+                                        <img src={posterUrl} alt={data.title} />
+                                    </div>
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </Swiper>
+            </div>
+            <div className="alternateswipergfhf6677">
+                <span className='fhfhfhyf67576'>Use Desktop to experience more features.</span>
+                <span className='fhfhfhyf67576'>Make an account to like and add to watchlist content and get recommendations accordingly..</span>
+            </div>
+        </>
     )
 }
 

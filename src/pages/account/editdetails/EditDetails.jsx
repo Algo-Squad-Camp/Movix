@@ -44,7 +44,7 @@ function EditDetails() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.loading("Updating on progress...");
+        toast.info("Updating, Please Wait...");
         setCame("Updating On Progress...");
         Axios.post(`https://movix-api.vercel.app/api/user/addUserDetails`, {
             email,
@@ -61,7 +61,6 @@ function EditDetails() {
             if (response.data.msg === "Record Registered....") {
                 setRegistered(true);
                 setCame("Update Profile");
-                toast.update("Account Details Updated Successfully!");
                 toast.success("Account Details Updated Successfully!");
             }
         }).catch(err => {

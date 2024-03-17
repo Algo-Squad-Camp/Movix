@@ -74,6 +74,10 @@ function AccountPage() {
             {watchList && <AccountWatchLaterList />
             }
             {AccountDetailsChange && <EditDetails />}
+            <div className="alternateswipergfhf6677">
+                <span className='fhfhfhyf67576'>Use Desktop to experience more features.</span>
+                <span className='fhfhfhyf67576'>Make an account to like and add to watchlist content and get recommendations accordingly..</span>
+            </div>
         </div>
     )
 }
