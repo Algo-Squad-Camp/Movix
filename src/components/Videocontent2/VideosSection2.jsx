@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import "./style.scss";
 import { useSelector } from "react-redux";
-
+import {
+    BsFillArrowLeftCircleFill,
+    BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImage/Img";
-import Line from "../line/Line"
 import Stream from "../stream/Stream";
 import { PlayIcon } from "../../pages/details/Playbtn";
 import dayjs from "dayjs";
@@ -20,9 +22,22 @@ const VideosSection2 = ({ data, loading, title, mediaType, id, name }) => {
     const [season, setSeason] = useState(1);
     const [titlestr, setTitle] = useState("");
     const [openstream, setOpenstream] = useState(false);
+    const carouselContainer = useRef();
 
+    const navigation = (dir) => {
+        const container = carouselContainer.current;
+        const conatainerHalfWidth = (container.offsetWidth / 2) + 50;
 
-    console.log(data?.episodes);
+        const scrollAmount =
+            dir === "left"
+                ? container.scrollLeft - (container.offsetWidth - conatainerHalfWidth)
+                : container.scrollLeft + (container.offsetWidth - conatainerHalfWidth);
+
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+    };
 
     const handleEpisodeClick = (item) => {
         setSeason(item?.season_number);
@@ -53,8 +68,18 @@ const VideosSection2 = ({ data, loading, title, mediaType, id, name }) => {
             <div className="videosSection">
                 <ContentWrapper>
                     <div className="sectionHeading">{title}</div>
+                    <BsFillArrowLeftCircleFill
+                        className="carouselLeftNavvideoa arrow46"
+                        style={{ top: stream ? "12%" : "35%" }}
+                        onClick={() => navigation("left")}
+                    />
+                    <BsFillArrowRightCircleFill
+                        className="carouselRighttNavvideoa arrow46"
+                        style={{ top: stream ? "12%" : "35%" }}
+                        onClick={() => navigation("right")}
+                    />
                     {!loading ? (
-                        <div className="videos">
+                        <div className="videos" ref={carouselContainer}>
                             {data?.episodes?.map((item) => (
                                 <div
                                     className="videoItem"
@@ -87,7 +112,6 @@ const VideosSection2 = ({ data, loading, title, mediaType, id, name }) => {
                 </ContentWrapper>
                 {stream && <Stream EndPoint={mediaType} id={id} title={titlestr} season={season} episode={episode} />}
             </div>
-            <Line />
         </>
     );
 };

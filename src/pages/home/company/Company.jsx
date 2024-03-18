@@ -4,9 +4,13 @@ import Carousel from "../../../components/carousel/Carousel";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
 import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
+import SeeMore from "../../../components/seemore/SeeMore";
 
 
 const Cartoon = () => {
+
+    const [show, setShow] = useState(false);
+
 
     const [number, setNumber] = useState(923);
     const [active, setActive] = useState("Legendary Pictures");
@@ -22,14 +26,26 @@ const Cartoon = () => {
         }
     };
 
+    const title = active + " Movies List";
+
+
     return (
-        <div className="carouselSection">
-            <ContentWrapper>
-                <span className="carouselTitle">Movies from '{active}'</span>
-                <SwitchTabs data={["Legendary", "New Line"]} onTabChange={onTabChange} />
-            </ContentWrapper>
-            <Carousel data={data?.results} loading={loading} endpoint="movie" />
-        </div>
+        <>
+            <div className="carouselSection">
+                <ContentWrapper>
+                    <span className="carouselTitle" onClick={() => setShow(true)}>Movies from '{active}'</span>
+                    <SwitchTabs data={["Legendary", "New Line"]} onTabChange={onTabChange} />
+                </ContentWrapper>
+                <Carousel data={data?.results} loading={loading} endpoint="movie" />
+            </div>
+            <SeeMore
+                show={show}
+                setShow={setShow}
+                title={title}
+                data={data?.results}
+                loading={loading}
+            />
+        </>
     );
 };
 

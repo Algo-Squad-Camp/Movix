@@ -11,6 +11,35 @@
         margin-bottom: 25px;
     }
 
+    .arrow4554casta {
+        font-size: 30px;
+        color: var(--item-bg);
+        position: absolute;
+        top: 43%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        opacity: 0.6;
+        z-index: 1;
+        display: none;
+
+        @include md {
+            display: block;
+        }
+
+        &:hover {
+            opacity: 0.7;
+            color: black;
+        }
+    }
+
+    .carouselLeftNav {
+        left: 21px;
+    }
+
+    .carouselRighttNav {
+        right: 21px;
+    }
+
     .listItems {
         display: flex;
         gap: 20px;

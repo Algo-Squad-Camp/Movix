@@ -11,6 +11,35 @@
         margin-bottom: 25px;
     }
 
+    .arrow4554video {
+        font-size: 30px;
+        color: var(--item-bg);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        opacity: 0.6;
+        z-index: 1;
+        display: none;
+
+        @include md {
+            display: block;
+        }
+
+        &:hover {
+            opacity: 0.7;
+            color: black;
+        }
+    }
+
+    .carouselLeftNav {
+        left: 21px;
+    }
+
+    .carouselRighttNav {
+        right: 21px;
+    }
+
     .videos {
         display: flex;
         gap: 10px;

@@ -96,8 +96,8 @@ body {
 
 @media only screen and (max-width: 540px) {
   .Toastify__toast-container--bottom-right {
-    bottom: 0;
     top: 80px;
+    right: 1px;
     width: 368px;
   }
 }

@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useFetch from "../../../hooks/useFetch";
+import {
+    BsFillArrowLeftCircleFill,
+    BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 
 import Img from "../../../components/lazyLoadImage/Img";
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
@@ -21,6 +25,23 @@ function Star() {
     const [details, setDetails] = useState({});
     const [get, setGet] = useState(false);
     const movieID = doc(db, 'users', `${user?.email}`);
+
+    const carouselContainer = useRef();
+
+    const navigation = (dir) => {
+        const container = carouselContainer.current;
+        const conatainerHalfWidth = (container.offsetWidth / 2) + 50;
+
+        const scrollAmount =
+            dir === "left"
+                ? container.scrollLeft - (container.offsetWidth - conatainerHalfWidth)
+                : container.scrollLeft + (container.offsetWidth - conatainerHalfWidth);
+
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+    };
 
     useEffect(() => {
         const emailuser = user?.email;
@@ -101,28 +122,38 @@ function Star() {
                         </div>
                     </div>
                     <div class="thumbnail">
-                        {data?.results?.map((item) => {
-                            const posterUrl = item.poster_path
-                                ? url.poster + item.poster_path
-                                : PosterFallback;
+                        <BsFillArrowLeftCircleFill
+                            className="carouselLeftNav45623 arrow456453"
+                            onClick={() => navigation("left")}
+                        />
+                        <BsFillArrowRightCircleFill
+                            className="carouselRighttNav45623 arrow456453"
+                            onClick={() => navigation("right")}
+                        />
+                        <div className="thumbnailitemsstar" ref={carouselContainer}>
+                            {data?.results?.map((item) => {
+                                const posterUrl = item.poster_path
+                                    ? url.poster + item.poster_path
+                                    : PosterFallback;
 
-                            return (
-                                <div class="item" key={item?.id} onClick={() => {
-                                    setMovie(item);
-                                    setBackground(posterUrl);
-                                }}>
-                                    <img src={posterUrl} />
-                                    <div class="content">
-                                        <div class="title">
-                                            {data?.title || data?.name}
-                                        </div>
-                                        <div class="description">
-                                            {data?.release_date}
+                                return (
+                                    <div class="item" key={item?.id} onClick={() => {
+                                        setMovie(item);
+                                        setBackground(posterUrl);
+                                    }}>
+                                        <img src={posterUrl} />
+                                        <div class="content">
+                                            <div class="title">
+                                                {data?.title || data?.name}
+                                            </div>
+                                            <div class="description">
+                                                {data?.release_date}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             ) : (<div className="loaderstar34">
