@@ -43,6 +43,9 @@ function Stream({ EndPoint, id, title, season, episode }) {
     return (
         <>
             <ContentWrapper>
+                <div className="linedivstream">
+                    <div className="linestream"></div>
+                </div>
                 <div className="carouselSectionstream">
                     <ContentWrapper>
                         <span className="carouselTitle" onClick={() => setShow(true)}>Server:</span>

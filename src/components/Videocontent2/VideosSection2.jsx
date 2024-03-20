@@ -70,12 +70,12 @@ const VideosSection2 = ({ data, loading, title, mediaType, id, name }) => {
                     <div className="sectionHeading">{title}</div>
                     <BsFillArrowLeftCircleFill
                         className="carouselLeftNavvideoa arrow46videoa"
-                        style={{ top: stream ? "12%" : "38%" }}
+                        style={{ top: stream ? "39%" : "38%" }}
                         onClick={() => navigation("left")}
                     />
                     <BsFillArrowRightCircleFill
                         className="carouselRighttNavvideoa arrow46videoa"
-                        style={{ top: stream ? "12%" : "38%" }}
+                        style={{ top: stream ? "39%" : "38%" }}
                         onClick={() => navigation("right")}
                     />
                     {!loading ? (

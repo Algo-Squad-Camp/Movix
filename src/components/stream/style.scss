@@ -1,3 +1,16 @@
+.linedivstream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22.5px;
+
+    .linestream {
+        height: 1px;
+        width: 50%;
+        background: var(--line);
+    }
+}
+
 .main-streamarea {
     h1 {
         font-size: 25px;

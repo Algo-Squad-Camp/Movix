@@ -62,7 +62,7 @@ const VideosSection = ({ data, loading }) => {
                             {data?.results?.map((video) => (
                                 <div
                                     key={video.id}
-                                    className="videoItem"
+                                    className="videoItemvideo"
                                     onClick={() => {
                                         setVideoId(video.key);
                                         setShow(true);
