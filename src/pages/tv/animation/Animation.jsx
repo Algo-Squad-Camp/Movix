@@ -31,6 +31,8 @@ const Animation = () => {
                 title="Animated TV Shows List"
                 data={data?.results}
                 loading={loading}
+                endpoint="tv"
+
             />
         </>
     );

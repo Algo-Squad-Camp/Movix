@@ -1,11 +1,15 @@
 @import "../../mixins.scss";
 
 .castSection {
-    position: relative;
+    // position: relative;
     margin-bottom: 30px;
     margin-top: 30px;
 
-    .arrow456 {
+    .contentWrapper {
+        position: relative;
+    }
+
+    .arrow456castcar {
         font-size: 30px;
         color: var(--item-bg);
         position: absolute;
@@ -26,12 +30,12 @@
         }
     }
 
-    .carouselLeftNav456 {
-        left: 2px;
+    .carouselLeftNav456castcar {
+        left: -20px;
     }
 
-    .carouselRighttNav456 {
-        right: 10px;
+    .carouselRighttNav456castcar {
+        right: -17px;
     }
 
     .listItems {

@@ -30,6 +30,8 @@ const TopRated = () => {
                 title="Top Rated TV Shows List"
                 data={data?.results}
                 loading={loading}
+                endpoint="tv"
+
             />
         </>
     );

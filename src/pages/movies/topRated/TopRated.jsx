@@ -31,6 +31,8 @@ const TopRated = () => {
                 title="Top rated Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

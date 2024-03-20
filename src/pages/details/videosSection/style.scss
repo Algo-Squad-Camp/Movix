@@ -1,9 +1,12 @@
 @import "../../../mixins.scss";
 
 .videosSection {
-    position: relative;
     margin-bottom: 30px;
     margin-top: 30px;
+
+    .contentWrapper {
+        position: relative;
+    }
 
     .sectionHeading {
         font-size: 24px;
@@ -11,11 +14,11 @@
         margin-bottom: 25px;
     }
 
-    .arrow4554video {
+    .arrow4554detailsvideo {
         font-size: 30px;
         color: var(--item-bg);
         position: absolute;
-        top: 50%;
+        top: 48%;
         transform: translateY(-50%);
         cursor: pointer;
         opacity: 0.6;
@@ -32,12 +35,12 @@
         }
     }
 
-    .carouselLeftNav {
-        left: 21px;
+    .carouselLeftNavdetailsvideo {
+        left: -20px;
     }
 
-    .carouselRighttNav {
-        right: 21px;
+    .carouselRighttNavdetailsvideo {
+        right: -20px;
     }
 
     .videos {
@@ -139,6 +142,8 @@
                 color: var(--text-color);
                 font-size: 14px;
                 line-height: 20px;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
                 @include md {
                     font-size: 16px;

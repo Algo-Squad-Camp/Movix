@@ -9,7 +9,7 @@ import dayjs from "dayjs";
 import PosterFallback from "../../assets/no-poster.png";
 
 
-const SeeMore = ({ show, setShow, title, data, loading }) => {
+const SeeMore = ({ show, setShow, title, data, loading, endpoint }) => {
     const hidePopup = () => {
         setShow(false);
         setVideoId(null);
@@ -46,11 +46,13 @@ const SeeMore = ({ show, setShow, title, data, loading }) => {
                                 key={item.id}
                                 className="carouselItem"
                             >
-                                <div className="posterBlock" onClick={() =>
+                                <div className="posterBlock" onClick={() => {
                                     navigate(
                                         `/${item.media_type || endpoint}/${item.id
                                         }`
-                                    )
+                                    );
+                                    hidePopup();
+                                }
                                 }>
                                     <Img src={posterUrl} />
                                     <CircleRating

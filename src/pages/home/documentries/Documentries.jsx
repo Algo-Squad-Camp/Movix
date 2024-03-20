@@ -35,6 +35,7 @@ const Documentries = () => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint={endpoint}
             />
         </>
     );

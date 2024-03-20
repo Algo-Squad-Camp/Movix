@@ -30,6 +30,8 @@ const InTheaters = () => {
                 title="Airing today TV Shows List"
                 data={data?.results}
                 loading={loading}
+                endpoint="tv"
+
             />
         </>
     );

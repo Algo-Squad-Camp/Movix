@@ -24,6 +24,8 @@ const FavourateGenre = ({ genre, title }) => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

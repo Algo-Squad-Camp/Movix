@@ -10,6 +10,7 @@ import ContentWrapper from '../../components/contentWrapper/ContentWrapper';
 import { UserAuth } from '../../context/AuthContext';
 import EditDetails from './editdetails/EditDetails';
 import { toast } from 'react-toastify';
+import Line from './../../components/line/Line';
 
 function AccountPage() {
     const { user } = UserAuth();
@@ -74,6 +75,7 @@ function AccountPage() {
             {watchList && <AccountWatchLaterList />
             }
             {AccountDetailsChange && <EditDetails />}
+            <Line />
             <div className="alternateswipergfhf6677">
                 <span className='fhfhfhyf67576'>Use Desktop to experience more features.</span>
                 <span className='fhfhfhyf67576'>Make an account to like and add to watchlist content and get recommendations accordingly..</span>

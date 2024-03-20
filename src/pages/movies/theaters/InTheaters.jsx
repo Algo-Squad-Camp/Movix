@@ -31,6 +31,8 @@ const InTheaters = () => {
                 title="In Theaters Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

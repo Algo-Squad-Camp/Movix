@@ -69,13 +69,13 @@ const VideosSection2 = ({ data, loading, title, mediaType, id, name }) => {
                 <ContentWrapper>
                     <div className="sectionHeading">{title}</div>
                     <BsFillArrowLeftCircleFill
-                        className="carouselLeftNavvideoa arrow46"
-                        style={{ top: stream ? "12%" : "35%" }}
+                        className="carouselLeftNavvideoa arrow46videoa"
+                        style={{ top: stream ? "12%" : "38%" }}
                         onClick={() => navigation("left")}
                     />
                     <BsFillArrowRightCircleFill
-                        className="carouselRighttNavvideoa arrow46"
-                        style={{ top: stream ? "12%" : "35%" }}
+                        className="carouselRighttNavvideoa arrow46videoa"
+                        style={{ top: stream ? "12%" : "38%" }}
                         onClick={() => navigation("right")}
                     />
                     {!loading ? (

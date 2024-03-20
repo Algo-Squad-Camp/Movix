@@ -1,9 +1,12 @@
 @import "../../../mixins.scss";
 
 .castSection {
-    position: relative;
     margin-bottom: 30px;
     margin-top: 30px;
+
+    .contentWrapper {
+        position: relative;
+    }
 
     .sectionHeading {
         font-size: 24px;
@@ -11,11 +14,11 @@
         margin-bottom: 25px;
     }
 
-    .arrow4554casta {
+    .arrow4554detailscast {
         font-size: 30px;
         color: var(--item-bg);
         position: absolute;
-        top: 43%;
+        top: 48%;
         transform: translateY(-50%);
         cursor: pointer;
         opacity: 0.6;
@@ -32,12 +35,12 @@
         }
     }
 
-    .carouselLeftNav {
-        left: 21px;
+    .carouselLeftNavdetailscast {
+        left: -20px;
     }
 
-    .carouselRighttNav {
-        right: 21px;
+    .carouselRighttNavdetailscast {
+        right: -17px;
     }
 
     .listItems {
@@ -85,6 +88,9 @@
                 font-size: 14px;
                 line-height: 20px;
                 font-weight: 600;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
                 @include md {
                     font-size: 18px;
@@ -100,6 +106,9 @@
                 font-size: 14px;
                 line-height: 20px;
                 opacity: 0.5;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
                 @include md {
                     font-size: 16px;

@@ -29,6 +29,7 @@ const Animation = () => {
                 title="Animation Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
             />
         </>
     );

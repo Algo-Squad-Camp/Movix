@@ -33,6 +33,8 @@ const Upcoming = () => {
                 title="Upcoming Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

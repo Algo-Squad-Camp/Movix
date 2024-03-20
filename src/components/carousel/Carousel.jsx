@@ -38,21 +38,22 @@ const Carousel = ({ data, loading, endpoint, title }) => {
 
     const saveLiked = async (item) => {
         if (user?.email) {
+            toast.info("Liking Post is in progress...");
             setLike(true);
             setSaved(true)
             await updateDoc(movieID, {
                 savedLiked: arrayUnion({
                     id: item.id,
                     title: item.title || item.name,
-                    img: item.backdrop_path,
+                    img: item.poster_path,
                     media_type: item.media_type || endpoint,
                 })
             })
-            const title64645 = data.name || data.title;
+            const title64645 = item.name || item.title;
             const msgggg = title64645 + " " + "added to liked list";
             toast.success(msgggg);
         } else {
-            const titlee424 = data.name || data.title;
+            const titlee424 = item.name || item.title;
             const end = item.media_type || endpoint;
             const msgg = "Please Login to like a " + end + titlee424;
             toast.warn(msgg);

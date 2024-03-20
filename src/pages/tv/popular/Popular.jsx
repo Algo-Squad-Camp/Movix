@@ -29,6 +29,8 @@ const Popular = () => {
                     title="Popular TV Shows List"
                     data={data?.results}
                     loading={loading}
+                    endpoint="tv"
+
                 />
             </div>
         </>

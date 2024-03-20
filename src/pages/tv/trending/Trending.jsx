@@ -32,6 +32,8 @@ const Trending = () => {
                 title="Trending TV Shows List"
                 data={data?.results}
                 loading={loading}
+                endpoint="tv"
+
             />
         </>
     );

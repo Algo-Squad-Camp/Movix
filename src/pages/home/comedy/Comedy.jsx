@@ -37,6 +37,7 @@ const Comedy = () => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint={endpoint}
             />
         </>
     );

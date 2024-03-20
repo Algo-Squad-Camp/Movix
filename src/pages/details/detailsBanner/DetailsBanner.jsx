@@ -45,12 +45,13 @@ const DetailsBanner = ({ video, crew }) => {
     const movieID = doc(db, 'users', `${user?.email}`);
 
     const saveLiked = async (data) => {
+        toast.info("Liking Post is in progress...");
         if (user?.email) {
             await updateDoc(movieID, {
                 savedLiked: arrayUnion({
                     id: data.id || id,
                     title: data.name || data.title,
-                    img: data.backdrop_path,
+                    img: data.poster_path,
                     media_type: data.media_type || mediaType,
                 })
             })
@@ -66,12 +67,13 @@ const DetailsBanner = ({ video, crew }) => {
     }
 
     const saveWatchList = async (data) => {
+        toast.info("Adding post is in progress...");
         if (user?.email) {
             await updateDoc(movieID, {
                 savedWatchLater: arrayUnion({
                     id: data.id || id,
                     title: data.name || data.title,
-                    img: data.backdrop_path,
+                    img: data.poster_path,
                     media_type: data.media_type || mediaType,
                 })
             })

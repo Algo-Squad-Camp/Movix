@@ -31,6 +31,8 @@ const Revenue = () => {
                 title="Overall Revenue Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

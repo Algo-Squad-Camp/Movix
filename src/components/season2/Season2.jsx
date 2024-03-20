@@ -4,7 +4,6 @@ import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
-import Line from "../line/Line";
 import {
     BsFillArrowLeftCircleFill,
     BsFillArrowRightCircleFill,
@@ -118,7 +117,6 @@ const Season2 = ({ id, heading }) => {
                     )}
                 </ContentWrapper>
             </div>
-            <Line />
         </>
     );
 };

@@ -24,6 +24,7 @@ const CustomLiked1 = ({ data, loading, title, endpoint }) => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint={endpoint}
             />
         </>
     );

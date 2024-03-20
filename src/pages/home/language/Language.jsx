@@ -64,6 +64,8 @@ const Language = () => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

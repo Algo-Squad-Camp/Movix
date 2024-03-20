@@ -72,6 +72,8 @@ const Country = () => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

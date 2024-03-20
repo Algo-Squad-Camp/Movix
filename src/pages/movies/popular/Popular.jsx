@@ -29,6 +29,8 @@ const Popular = () => {
                 title="Popular Movies List"
                 data={data?.results}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

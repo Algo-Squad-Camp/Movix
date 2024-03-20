@@ -1,0 +1,24 @@
+.carouselSectionstream {
+    position: relative;
+    margin-bottom: 30px;
+
+    &>.contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .carouselTitle {
+        font-size: 24px;
+        color: var(--text-color);
+        font-weight: var(--weight);
+        cursor: pointer;
+
+        @media only screen and (max-width: 440px) {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+    }
+}

@@ -130,6 +130,16 @@
                         height: 227px;
                     }
 
+                    @media only screen and (min-width: 1282px) {
+                        height: 280px;
+
+                    }
+
+                    @media only screen and (min-width: 1700px) {
+                        height: 300px;
+
+                    }
+
 
                     // overflow: hidden;
                     .lazy-load-image-background {

@@ -47,7 +47,7 @@ const AccountLikedPeople = () => {
             <ContentWrapper>
                 {!movies?.length <= 0 ? undefined : <div className="noresultsaccount67"><span>Like a People or Individual to Start Accesing Here!</span></div>}
             </ContentWrapper>
-            <div className="AccountLikedList-list">
+            <div className="AccountLikedList-list-main">
                 {movies?.map(item => {
                     const posterurl = item.img
                         ? url.profile + item.img

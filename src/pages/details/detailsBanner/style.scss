@@ -149,6 +149,8 @@
                 line-height: 40px;
                 color: #f1683a;
                 font-weight: 550;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
                 @include md {
                     font-size: 34px;

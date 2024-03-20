@@ -56,6 +56,7 @@ const Details = () => {
             <div className="details">
                 <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
                 <Cast data={credits?.cast} loading={creditsLoading} heading={"Top Cast"} />
+
                 {seasons?.seasons && <Season data={seasons?.seasons} loading={seasonloading} heading={"Available Seasons"} id={idd} title={title} mediaType={mediaType} />
                 }
                 {Collections && <Season2 id={Collections} heading={`Belongs To ${title} Collection`} />

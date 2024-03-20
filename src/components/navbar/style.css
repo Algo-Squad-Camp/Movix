@@ -5,20 +5,14 @@
     background: var(--item-bg);
     border-radius: 10px;
     left: 50%;
+    transition: all ease 0.5s;
     transform: translate(-50%);
     bottom: 1px;
-    z-index: 9999;
+    z-index: 99999999999;
     opacity: 0.6;
     transition: 0.5s;
 }
 
-
-/* @media only screen and (max-width: 410px) {
-    .navbar {
-        width: 430px;
-        opacity: 0.8;
-    }
-} */
 
 .navbar:hover {
     opacity: 1;

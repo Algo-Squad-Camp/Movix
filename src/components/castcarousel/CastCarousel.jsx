@@ -48,11 +48,11 @@ const CastCarousel = ({ data, loading }) => {
             <div className="castSection">
                 <ContentWrapper>
                     <BsFillArrowLeftCircleFill
-                        className="carouselLeftNav456 arrow456"
+                        className="carouselLeftNav456castcar arrow456castcar"
                         onClick={() => navigation("left")}
                     />
                     <BsFillArrowRightCircleFill
-                        className="carouselRighttNav456 arrow456"
+                        className="carouselRighttNav456castcar arrow456castcar"
                         onClick={() => navigation("right")}
                     />
                     {!loading ? (

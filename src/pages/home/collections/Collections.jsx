@@ -95,6 +95,8 @@ const Collections = () => {
                 title={title}
                 data={data?.parts}
                 loading={loading}
+                endpoint="movie"
+
             />
         </>
     );

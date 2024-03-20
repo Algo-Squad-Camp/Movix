@@ -50,11 +50,11 @@ const Cast = ({ data, loading, heading }) => {
                 <ContentWrapper>
                     <div className="sectionHeading">{heading}</div>
                     <BsFillArrowLeftCircleFill
-                        className="carouselLeftNav arrow4554casta"
+                        className="carouselLeftNavdetailscast arrow4554detailscast"
                         onClick={() => navigation("left")}
                     />
                     <BsFillArrowRightCircleFill
-                        className="carouselRighttNav arrow4554casta"
+                        className="carouselRighttNavdetailscast arrow4554detailscast"
                         onClick={() => navigation("right")}
                     />
                     {!loading ? (

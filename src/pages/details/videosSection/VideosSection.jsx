@@ -50,11 +50,11 @@ const VideosSection = ({ data, loading }) => {
                 <ContentWrapper>
                     <div className="sectionHeading">Official Videos</div>
                     <BsFillArrowLeftCircleFill
-                        className="carouselLeftNav arrow4554video"
+                        className="carouselLeftNavdetailsvideo arrow4554detailsvideo"
                         onClick={() => navigation("left")}
                     />
                     <BsFillArrowRightCircleFill
-                        className="carouselRighttNav arrow4554video"
+                        className="carouselRighttNavdetailsvideo arrow4554detailsvideo"
                         onClick={() => navigation("right")}
                     />
                     {!loading ? (

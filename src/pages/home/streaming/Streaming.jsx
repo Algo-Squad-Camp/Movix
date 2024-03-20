@@ -119,6 +119,7 @@ const Netflix = () => {
                 title={title}
                 data={data?.results}
                 loading={loading}
+                endpoint={media}
             />
         </>
     );

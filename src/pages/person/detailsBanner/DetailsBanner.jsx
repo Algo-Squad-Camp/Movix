@@ -34,6 +34,7 @@ const DetailsBanner = () => {
 
     const saveLiked = async (data) => {
         if (user?.email) {
+            toast.info("Liking Post is in progress...");
             await updateDoc(movieID, {
                 savedLikedPeople: arrayUnion({
                     id: data.id || id,

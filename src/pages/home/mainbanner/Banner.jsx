@@ -48,14 +48,14 @@ function Banner() {
                 >
                     {
                         data?.map((item) => {
-                            const posterUrl = item.poster_path
-                                ? url.poster + item.poster_path
+                            const backdrop_path = item.backdrop_path
+                                ? url.backdrop + item.backdrop_path
                                 : PosterFallback;
 
                             return (
                                 <SwiperSlide>
                                     <div className="gameSlider">
-                                        <img src={posterUrl} alt={data.title} />
+                                        <img src={backdrop_path} alt={data.title} />
                                     </div>
                                 </SwiperSlide>
                             );

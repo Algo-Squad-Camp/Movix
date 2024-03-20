@@ -123,11 +123,11 @@ function Star() {
                     </div>
                     <div class="thumbnail">
                         <BsFillArrowLeftCircleFill
-                            className="carouselLeftNav45623 arrow456453"
+                            className="carouselLeftNav45623star arrow456453star"
                             onClick={() => navigation("left")}
                         />
                         <BsFillArrowRightCircleFill
-                            className="carouselRighttNav45623 arrow456453"
+                            className="carouselRighttNav45623star arrow456453star"
                             onClick={() => navigation("right")}
                         />
                         <div className="thumbnailitemsstar" ref={carouselContainer}>
@@ -135,11 +135,14 @@ function Star() {
                                 const posterUrl = item.poster_path
                                     ? url.poster + item.poster_path
                                     : PosterFallback;
+                                const backdrop_path = item?.backdrop_path
+                                    ? url.backdrop + item?.backdrop_path
+                                    : "";
 
                                 return (
                                     <div class="item" key={item?.id} onClick={() => {
                                         setMovie(item);
-                                        setBackground(posterUrl);
+                                        setBackground(backdrop_path);
                                     }}>
                                         <img src={posterUrl} />
                                         <div class="content">
