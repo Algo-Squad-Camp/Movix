@@ -18,8 +18,7 @@
         font-size: 30px;
         color: var(--item-bg);
         position: absolute;
-        top: 47%;
-        transform: translateY(-50%);
+        top: 42%;
         cursor: pointer;
         opacity: 0.6;
         z-index: 1;
@@ -60,8 +59,12 @@
         .videoItemvideo {
             width: 150px;
             flex-shrink: 0;
-            height: 230px;
+            max-height: 180px;
             overflow-y: hidden;
+
+            @media only screen and (min-width: 560px) {
+                max-height: 250px;
+            }
 
             @include md {
                 width: 25%;

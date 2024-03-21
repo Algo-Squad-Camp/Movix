@@ -96,11 +96,21 @@ body {
   color: var(--text-color);
 }
 
-@media only screen and (max-width: 540px) {
-  .Toastify__toast-container--bottom-right {
-    top: 80px;
-    right: 1px;
-    width: 368px;
+.Toastify__toast-container {
+  z-index: 9999999999999999999999999999999;
+}
+
+@media only screen and (max-width: 560px) {
+  .Toastify__toast-container--top-center {
+    top: 70px;
+    color: var(--text-color);
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .Toastify__toast-container--top-center {
+    top: 74px;
+    color: var(--text-color);
   }
 }
 

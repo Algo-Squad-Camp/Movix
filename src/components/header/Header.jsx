@@ -77,7 +77,7 @@ const Header = () => {
 
     const openSearch = () => {
         setMobileMenu(false);
-        setShowSearch(true);
+        setShowSearch(!showSearch);
     };
 
     const openMobileMenu = () => {

@@ -46,12 +46,12 @@ function Stream({ EndPoint, id, title, season, episode }) {
                 <div className="linedivstream">
                     <div className="linestream"></div>
                 </div>
-                <div className="carouselSectionstream">
+                {width >= 560 && <div className="carouselSectionstream">
                     <ContentWrapper>
                         <span className="carouselTitle" onClick={() => setShow(true)}>Server:</span>
-                        <SwitchTabs data={[`${width <= 550 ? "1" : "Server 1"}`, `${width <= 550 ? "2" : "Server 2"}`, `${width <= 550 ? "3" : "Server 3"}`, `${width <= 550 ? "4" : "Server 4"}`]} onTabChange={onTabChange} />
+                        <SwitchTabs data={["Server 1", "Server 2", "Server 3", "Server 4"]} onTabChange={onTabChange} />
                     </ContentWrapper>
-                </div>
+                </div>}
                 <div className="main-streamarea">
                     <h1>Streaming {EndPoint} '{title}' on Server {server} </h1>
                     <div className='stream-main'>
@@ -64,6 +64,23 @@ function Stream({ EndPoint, id, title, season, episode }) {
                             </iframe>
                         </div>
                     </div>
+                </div>
+
+                {width <= 560 && <div className="mobseltabstream">
+                    <div className="mobseltabitems">
+                        <button className="butseltaba butseltab34" onClick={() => {
+                            setEndpoint("to");
+                            setServer("1");
+                        }}> Server 1</button>
+                        <button className="butseltabb butseltab34" onClick={() => {
+                            setEndpoint("xyz");
+                            setServer("2");
+                        }}> Server 2</button>
+                    </div>
+                </div>}
+
+                <div className="linedivstream">
+                    <div className="linestream"></div>
                 </div>
 
             </ContentWrapper>

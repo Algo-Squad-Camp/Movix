@@ -23,7 +23,7 @@ const VoteCount = () => {
         <>
             <div className="carouselSection">
                 <ContentWrapper>
-                    <span className="carouselTitle" onClick={() => setShow(true)}>Highly Reviewed(vote counts)</span>
+                    <span className="carouselTitle" onClick={() => setShow(true)}>Highly Reviewed</span>
                     <SwitchTabs data={["Movie", "TV"]} onTabChange={onTabChange} />
                 </ContentWrapper>
                 <Carousel data={data?.results} loading={loading} endpoint={endpoint} />

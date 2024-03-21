@@ -23,3 +23,30 @@
 
     }
 }
+
+.mobseltabstream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9.5px;
+    margin-bottom: 9px;
+
+    .mobseltabitems {
+        padding: 10px;
+        padding-bottom: 2px;
+
+        .butseltab34 {
+            padding: 10px;
+            color: var(--text-color);
+            font-weight: 400;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            background: var(--black-light);
+
+            &.butseltaba {
+                margin-right: 5px;
+            }
+        }
+    }
+}

@@ -58,6 +58,12 @@ function Star() {
         })
     }, []);
 
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [window.innerWidth])
+
     const saveWatchList = async (movie) => {
         if (user?.email) {
             await updateDoc(movieID, {
@@ -142,7 +148,7 @@ function Star() {
                                 return (
                                     <div class="item" key={item?.id} onClick={() => {
                                         setMovie(item);
-                                        setBackground(backdrop_path);
+                                        setBackground(width <= 560 ? posterUrl : backdrop_path);
                                     }}>
                                         <img src={posterUrl} />
                                         <div class="content">

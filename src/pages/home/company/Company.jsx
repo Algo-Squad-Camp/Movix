@@ -17,7 +17,7 @@ const Cartoon = () => {
     const { data, loading } = useFetch(`/discover/movie?with_companies=${number}`);
 
     const onTabChange = (tab) => {
-        if (tab === "New Line") {
+        if (tab === "NewLine") {
             setNumber(12);
             setActive("New Line Cinema Pictures");
         } else if (tab === "Legendary") {
@@ -34,7 +34,7 @@ const Cartoon = () => {
             <div className="carouselSection">
                 <ContentWrapper>
                     <span className="carouselTitle" onClick={() => setShow(true)}>Movies from '{active}'</span>
-                    <SwitchTabs data={["Legendary", "New Line"]} onTabChange={onTabChange} />
+                    <SwitchTabs data={["Legendary", "NewLine"]} onTabChange={onTabChange} />
                 </ContentWrapper>
                 <Carousel data={data?.results} loading={loading} endpoint="movie" />
             </div>

@@ -78,7 +78,7 @@ function App() {
                 <BrowserRouter>
                     <Header />
                     <ToastContainer
-                        position="bottom-right"
+                        position="top-center"
                         autoClose={3000}
                         hideProgressBar={false}
                         newestOnTop={true}
@@ -86,6 +86,7 @@ function App() {
                         pauseOnFocusLoss
                         draggable
                         pauseOnHover
+                        draggablePercent={60}
                         theme={themelist[(Math.floor(Math.random() * themelist.length))]}
                     />
                     <Routes>

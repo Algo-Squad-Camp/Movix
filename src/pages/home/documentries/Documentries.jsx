@@ -25,7 +25,7 @@ const Documentries = () => {
             <div className="carouselSection">
                 <ContentWrapper>
                     <span className="carouselTitle" onClick={() => setShow(true)}>Documentries </span>
-                    <SwitchTabs data={["Movie", "TV Show"]} onTabChange={onTabChange} />
+                    <SwitchTabs data={["Movie", "TV"]} onTabChange={onTabChange} />
                 </ContentWrapper>
                 <Carousel data={data?.results} loading={loading} endpoint={endpoint} />
             </div>
