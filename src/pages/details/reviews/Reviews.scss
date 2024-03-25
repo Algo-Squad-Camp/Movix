@@ -118,6 +118,13 @@
                         .parabold34576 {
                             color: var(--heading-color);
                             font-weight: 300;
+
+                        }
+
+                        .overviewmain23245 {
+                            @media only screen and (max-width: 560px) {
+                                width: 182px;
+                            }
                         }
                     }
 

@@ -40,6 +40,7 @@ const DetailsBanner = ({ video, crew }) => {
 
     const [showModal, setShowModal] = useState(false);
     const [shareData, setShareData] = useState();
+    const { mediaType, id } = useParams();
 
     const { user } = UserAuth();
     const movieID = doc(db, 'users', `${user?.email}`);
@@ -88,7 +89,6 @@ const DetailsBanner = ({ video, crew }) => {
         }
     }
 
-    const { mediaType, id } = useParams();
     const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
     const { url } = useSelector((state) => state.home);
@@ -265,7 +265,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             </div>
 
                                             <div className="info">
-                                                {data.first_air_date && (
+                                                {data?.first_air_date && (
                                                     <div className="infoItem">
                                                         <span className="text bold">
                                                             First Air Date:{" "}
@@ -277,7 +277,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                         </span>
                                                     </div>
                                                 )}
-                                                {data.original_language && (
+                                                {data?.original_language && (
                                                     <div className="infoItem">
                                                         <span className="text bold">
                                                             Original Language:{" "}
@@ -288,7 +288,16 @@ const DetailsBanner = ({ video, crew }) => {
                                                     </div>
                                                 )}
 
-                                                {data.origin_country && (
+                                                {!data?.origin_country && (<div className="infoItem">
+                                                    <span className="text bold">
+                                                        Content Type:{" "}
+                                                    </span>
+                                                    <span className="text">
+                                                        {mediaType}
+                                                    </span>
+                                                </div>)}
+
+                                                {data?.origin_country && (
                                                     <div className="infoItem">
                                                         <span className="text bold">
                                                             Origin Country:{" "}
@@ -298,7 +307,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                         </span>
                                                     </div>
                                                 )}
-                                                {data.revenue && (
+                                                {data?.revenue && (
                                                     <div className="infoItem">
                                                         <span className="text bold">
                                                             Revenue:{" "}
