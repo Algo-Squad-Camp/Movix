@@ -116,9 +116,9 @@ const Header = () => {
                         }}>
                             Login
                         </button>
-                    </li> : <NavLink className="menuItem" id="person" >
+                    </li> : <NavLink to={"/account"} className="menuItem" id="person" >
                         <BsPersonCircle onClick={() => {
-                            navigate('./account');
+                            navigate('/account');
                             setMobileMenu(false);
                         }
                         } />
