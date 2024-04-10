@@ -85,17 +85,6 @@ const Header = () => {
         setShowSearch(false);
     };
 
-    const navigationHandler = (type) => {
-        if (type === "explore") {
-            navigate("/explore/movie");
-        } else if (type === "home") {
-            navigate("/");
-        } else if (type === "about") {
-            navigate("/about");
-        }
-        setMobileMenu(false);
-    };
-
     return (
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
             <ContentWrapper>
@@ -106,21 +95,20 @@ const Header = () => {
                     <Toggle />
                 </div>
                 <ul className="menuItems">
-                    <li className="menuItem" onClick={() => {
-                        navigationHandler("home");
+                    <NavLink to={"/"} className="menuItem" onClick={() => {
                         setMobileMenu(false);
                     }}>
                         Home
-                    </li>
-                    <li
+                    </NavLink>
+                    <NavLink
+                        to={"/explore/movie"}
                         className="menuItem"
                         onClick={() => {
-                            navigationHandler("explore");
                             setMobileMenu(false);
                         }}
                     >
                         Explore
-                    </li>
+                    </NavLink>
                     {!user?.email ? <li className="menuItem">
                         <button className="loginbutton" onClick={() => {
                             navigate(`/login`);
@@ -128,13 +116,13 @@ const Header = () => {
                         }}>
                             Login
                         </button>
-                    </li> : <li className="menuItem" id="person" >
+                    </li> : <NavLink className="menuItem" id="person" >
                         <BsPersonCircle onClick={() => {
                             navigate('./account');
                             setMobileMenu(false);
                         }
                         } />
-                    </li>}
+                    </NavLink>}
                     {user?.email && <li
                         className="menuItem"
                         onClick={handleLogout}
