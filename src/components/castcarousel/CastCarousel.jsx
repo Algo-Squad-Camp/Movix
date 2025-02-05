@@ -68,9 +68,7 @@ const CastCarousel = ({ data, loading }) => {
                                         </div>
                                         <div onClick={() => navigate(`/${item.known_for[0].media_type}/${item.known_for[0].id}}`)}>
                                             <div className="name">{item.name || item.original_name}</div>
-                                            <div className="character">
-                                                {item?.known_for[0]?.media_type} : {item?.known_for[0]?.title || item?.known_for[0]?.original_title}
-                                            </div>
+                                            <div className="character"></div>
                                         </div>
                                     </div>
                                 );
