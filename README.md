@@ -9,10 +9,17 @@ Some Features:
 -   👌 Global state management with Redux-Toolkit
 -   🎃 add/remove to liked/Watchlist
 -   👾 Get Dynamic Recommendations based on likes/Watchlist
--   🚀 Stream 
+-   🚀 Stream(Watch Movie Online)
 -   👌 Get Content Details
 -   🐞 Error handling both on the server and on the client
 -   ⏳ And much more!
+
+<div align=center>
+
+ <img src="https://github.com/user-attachments/assets/137d7b55-5f3c-4c8b-abec-9f3fec8b866c" width=900 height=400>
+ 
+</div>
+
  
 ### Setup .env file
 
