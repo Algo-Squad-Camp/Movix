@@ -1,5 +1,5 @@
 
-# MERN Stack Project: Build a Movie/TV-Show Streaming Application
+# Build a Movie/TV-Show Streaming Application
 
 Some Features:
 
